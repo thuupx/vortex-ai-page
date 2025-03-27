@@ -58,8 +58,8 @@ export function PrivacySection() {
               No Cloud Storage
             </h3>
             <p className="text-primary-300/80">
-              Unlike other apps, we don&apos;t store your images in the cloud. Your
-              photos stay on your device.
+              Unlike other apps, we don&apos;t store your images in the cloud.
+              Your photos stay on your device.
             </p>
           </motion.div>
           <motion.div

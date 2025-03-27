@@ -43,7 +43,7 @@ export function WaitlistForm() {
         "Thanks for joining our waitlist. We'll notify you when VortexAI launches.",
         {
           description: "You're on the list!",
-        }
+        },
       );
 
       setEmail("");

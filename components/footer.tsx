@@ -12,24 +12,24 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-center text-sm text-primary-300/70 md:text-left">
-              © {new Date().getFullYear()} VortexAI. All rights reserved.
+              &copy; {new Date().getFullYear()} VortexAI. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="/privacy"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
               Terms of Service
             </Link>
             <Link
-              href="#"
+              href="mailto:xuanthu404@gmail.com"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
               Contact

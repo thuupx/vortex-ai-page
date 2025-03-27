@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Search, Trash2, MessageSquare, FileText } from "lucide-react";
-import * as motion from "motion/react-client"
+import * as motion from "motion/react-client";
 import { TiltCard } from "@/components/tilt-card";
 
 export function FeaturesSection() {
@@ -55,7 +55,8 @@ export function FeaturesSection() {
     {
       icon: <MessageSquare className="h-12 w-12 text-primary-300 mb-2" />,
       title: "AI Chat Insights",
-      description: "Chat with AI to gain insights about your image collection and organization.",
+      description:
+        "Chat with AI to gain insights about your image collection and organization.",
       content:
         "Ask questions about your photos and get intelligent answers about content, patterns, and organization.",
     },
