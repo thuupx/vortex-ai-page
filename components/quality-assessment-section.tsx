@@ -5,6 +5,9 @@ import Image from "next/image";
 import { Star, ImagePlus, Gauge, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { TiltCard } from "@/components/tilt-card";
+import { useEffect, useRef } from "react";
+
+import "@splidejs/splide/css";
 
 export function QualityAssessmentSection() {
   const qualityFactors = [
@@ -30,6 +33,35 @@ export function QualityAssessmentSection() {
       description: "Suggests which images to keep based on quality scores",
     },
   ];
+
+  const splideRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const loadSplide = async () => {
+      if (splideRef.current) {
+        const { Splide } = await import("@splidejs/splide");
+
+        const splide = new Splide(splideRef.current, {
+          type: "fade",
+          rewind: true,
+          autoplay: true,
+          interval: 3000,
+          arrows: false,
+          pagination: true,
+          pauseOnHover: false,
+          pauseOnFocus: false,
+        });
+
+        splide.mount();
+
+        return () => {
+          splide.destroy();
+        };
+      }
+    };
+
+    loadSplide();
+  }, []);
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
@@ -98,82 +130,114 @@ export function QualityAssessmentSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="relative w-full max-w-md mx-auto">
-              {/* Main image with quality score */}
-              <motion.div
-                className="relative z-20 bg-white rounded-xl shadow-xl overflow-hidden border-2 border-primary-100"
-                initial={{ scale: 0.9 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
-                <div className="relative aspect-[3/4] w-full">
-                  <Image
-                    src="/best-image.jpeg"
-                    alt="High quality image"
-                    fill
-                    className="object-cover w-auto h-auto"
-                  />
-                  <div className="absolute top-3 right-3 bg-primary-400 text-white font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
-                    <span>9.8</span>
-                  </div>
-                </div>
-                <div className="p-4 bg-white">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-primary-400">
-                      Best Quality
-                    </span>
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star
-                          key={star}
-                          className="h-4 w-4 fill-primary-300 text-primary-300"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              {/* Image slider with quality scores */}
+              <div ref={splideRef} className="splide">
+                <div className="splide__track">
+                  <ul className="splide__list">
+                    <li className="splide__slide">
+                      <div className="relative bg-white rounded-xl shadow-xl overflow-hidden border-2 border-primary-100">
+                        <div className="relative aspect-[3/4] w-full">
+                          <Image
+                            src="/best-image.jpeg"
+                            alt="High quality image"
+                            fill
+                            className="object-cover w-auto h-auto"
+                          />
+                          <div className="absolute top-3 right-3 bg-primary-400 text-white font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                            <span>9.8</span>
+                          </div>
+                        </div>
+                        <div className="p-4 bg-white">
+                          <div className="flex items-center justify-between">
+                            <span className="font-medium text-green-600">
+                              Best Quality
+                            </span>
+                            <div className="flex">
+                              {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                  key={star}
+                                  className="h-4 w-4 fill-green-600 text-green-600"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
 
-              {/* Background similar images with lower scores */}
-              <motion.div
-                className="absolute top-6 -left-4 z-10 w-3/4 h-auto bg-white rounded-xl shadow-lg overflow-hidden border border-primary-50 rotate-[-8deg] opacity-70"
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 0.7 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <div className="relative aspect-[3/4] w-full">
-                  <Image
-                    src="/similar-image.png"
-                    alt="Similar image with lower quality"
-                    fill
-                    className="object-cover w-auto h-auto"
-                  />
-                  <div className="absolute top-3 right-3 bg-primary-200 text-primary-400 font-bold rounded-full h-10 w-10 flex items-center justify-center border-2 border-white">
-                    <span>7.2</span>
-                  </div>
-                </div>
-              </motion.div>
+                    <li className="splide__slide">
+                      <div className="relative bg-white rounded-xl shadow-xl overflow-hidden border-2 border-primary-200">
+                        <div className="relative aspect-[3/4] w-full">
+                          <Image
+                            src="/best-image.jpeg"
+                            alt="Similar image with good quality"
+                            fill
+                            className="object-cover w-auto h-auto opacity-90"
+                            quality={40}
+                          />
+                          <div className="absolute top-3 right-3 bg-primary-200 text-primary-400 font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                            <span>7.2</span>
+                          </div>
+                        </div>
+                        <div className="p-4 bg-white">
+                          <div className="flex items-center justify-between">
+                            <span className="font-medium text-green-300">
+                              Good Quality
+                            </span>
+                            <div className="flex">
+                              {[1, 2, 3, 4].map((star) => (
+                                <Star
+                                  key={star}
+                                  className="h-4 w-4 fill-green-300 text-green-300"
+                                />
+                              ))}
+                              <Star className="h-4 w-4 text-green-300" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
 
-              <motion.div
-                className="absolute top-12 -right-4 z-10 w-2/3 h-auto bg-white rounded-xl shadow-lg overflow-hidden border border-primary-50 rotate-[5deg] opacity-70"
-                initial={{ x: 20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 0.7 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <div className="relative aspect-[3/4] w-full">
-                  <Image
-                    src="/similar-image.png"
-                    alt="Similar image with lower quality"
-                    fill
-                    className="object-cover w-auto h-auto"
-                  />
-                  <div className="absolute top-3 right-3 bg-primary-100 text-primary-400 font-bold rounded-full h-8 w-8 flex items-center justify-center border-2 border-white">
-                    <span>6.5</span>
-                  </div>
+                    <li className="splide__slide">
+                      <div className="relative bg-white rounded-xl shadow-xl overflow-hidden border-2 border-primary-100">
+                        <div className="relative aspect-[3/4] w-full">
+                          <Image
+                            src="/best-image.jpeg"
+                            alt="Similar image with average quality"
+                            fill
+                            className="object-cover w-auto h-auto"
+                            quality={10}
+                          />
+                          <div className="absolute top-3 right-3 bg-primary-100 text-primary-400 font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                            <span>6.5</span>
+                          </div>
+                        </div>
+                        <div className="p-4 bg-white">
+                          <div className="flex items-center justify-between">
+                            <span className="font-medium text-yellow-300">
+                              Average Quality
+                            </span>
+                            <div className="flex">
+                              {[1, 2, 3].map((star) => (
+                                <Star
+                                  key={star}
+                                  className="h-4 w-4 fill-yellow-300 text-yellow-300"
+                                />
+                              ))}
+                              {[1, 2].map((star) => (
+                                <Star
+                                  key={star}
+                                  className="h-4 w-4 text-yellow-300"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
