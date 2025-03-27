@@ -23,18 +23,36 @@ export function WaitlistForm() {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Call our API endpoint to save to the database
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    toast.success(
-      "Thanks for joining our waitlist. We'll notify you when VortexAI launches.",
-      {
-        description: "You're on the list!",
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to join waitlist");
       }
-    );
 
-    setEmail("");
-    setIsSubmitting(false);
+      toast.success(
+        "Thanks for joining our waitlist. We'll notify you when VortexAI launches.",
+        {
+          description: "You're on the list!",
+        }
+      );
+
+      setEmail("");
+    } catch (error) {
+      console.error("Waitlist submission error:", error);
+      toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
