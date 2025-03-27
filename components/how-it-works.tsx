@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Search, Zap, Sparkles, ArrowRight } from "lucide-react";
 
 export function HowItWorks() {

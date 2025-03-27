@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { WaitlistForm } from "@/components/waitlist-form";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null);

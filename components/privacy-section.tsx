@@ -1,7 +1,7 @@
 "use client";
 
 import { Shield, Lock, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function PrivacySection() {
   return (
