@@ -42,7 +42,7 @@ export function QualityAssessmentSection() {
         const { Splide } = await import("@splidejs/splide");
 
         const splide = new Splide(splideRef.current, {
-          type: "fade",
+          type: "slide",
           rewind: true,
           autoplay: true,
           interval: 3000,
@@ -50,6 +50,13 @@ export function QualityAssessmentSection() {
           pagination: true,
           pauseOnHover: false,
           pauseOnFocus: false,
+          width: '100%',
+          fixedWidth: '100%',
+          fixedHeight: 'auto',
+          heightRatio: 1.5,
+          focus: 'center',
+          trimSpace: false,
+          gap: '1rem',
         });
 
         splide.mount();
@@ -123,13 +130,13 @@ export function QualityAssessmentSection() {
           </motion.div>
 
           <motion.div
-            className="relative lg:h-[500px] flex items-center justify-center"
+            className="relative w-full flex items-center justify-center"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto px-2 sm:px-0">
               {/* Image slider with quality scores */}
               <div ref={splideRef} className="splide">
                 <div className="splide__track">
@@ -141,22 +148,24 @@ export function QualityAssessmentSection() {
                             src="/best-image.jpeg"
                             alt="High quality image"
                             fill
-                            className="object-cover w-auto h-auto"
+                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 350px, 400px"
+                            priority
                           />
-                          <div className="absolute top-3 right-3 bg-primary-400 text-white font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                          <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-primary-400 text-white font-bold rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border-2 border-white text-xs sm:text-sm">
                             <span>9.8</span>
                           </div>
                         </div>
-                        <div className="p-4 bg-white">
+                        <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
-                            <span className="font-medium text-green-600">
+                            <span className="font-medium text-green-600 text-xs sm:text-sm">
                               Best Quality
                             </span>
                             <div className="flex">
                               {[1, 2, 3, 4, 5].map((star) => (
                                 <Star
                                   key={star}
-                                  className="h-4 w-4 fill-green-600 text-green-600"
+                                  className="h-3 w-3 sm:h-4 sm:w-4 fill-green-600 text-green-600"
                                 />
                               ))}
                             </div>
@@ -172,26 +181,27 @@ export function QualityAssessmentSection() {
                             src="/best-image.jpeg"
                             alt="Similar image with good quality"
                             fill
-                            className="object-cover w-auto h-auto opacity-90"
+                            className="object-cover opacity-90"
                             quality={40}
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 350px, 400px"
                           />
-                          <div className="absolute top-3 right-3 bg-primary-200 text-primary-400 font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                          <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-primary-200 text-primary-400 font-bold rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border-2 border-white text-xs sm:text-sm">
                             <span>7.2</span>
                           </div>
                         </div>
-                        <div className="p-4 bg-white">
+                        <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
-                            <span className="font-medium text-green-300">
+                            <span className="font-medium text-green-300 text-xs sm:text-sm">
                               Good Quality
                             </span>
                             <div className="flex">
                               {[1, 2, 3, 4].map((star) => (
                                 <Star
                                   key={star}
-                                  className="h-4 w-4 fill-green-300 text-green-300"
+                                  className="h-3 w-3 sm:h-4 sm:w-4 fill-green-300 text-green-300"
                                 />
                               ))}
-                              <Star className="h-4 w-4 text-green-300" />
+                              <Star className="h-3 w-3 sm:h-4 sm:w-4 text-green-300" />
                             </div>
                           </div>
                         </div>
@@ -205,29 +215,30 @@ export function QualityAssessmentSection() {
                             src="/best-image.jpeg"
                             alt="Similar image with average quality"
                             fill
-                            className="object-cover w-auto h-auto"
+                            className="object-cover"
                             quality={10}
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 350px, 400px"
                           />
-                          <div className="absolute top-3 right-3 bg-primary-100 text-primary-400 font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
+                          <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-primary-100 text-primary-400 font-bold rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center border-2 border-white text-xs sm:text-sm">
                             <span>6.5</span>
                           </div>
                         </div>
-                        <div className="p-4 bg-white">
+                        <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
-                            <span className="font-medium text-yellow-300">
+                            <span className="font-medium text-yellow-300 text-xs sm:text-sm">
                               Average Quality
                             </span>
                             <div className="flex">
                               {[1, 2, 3].map((star) => (
                                 <Star
                                   key={star}
-                                  className="h-4 w-4 fill-yellow-300 text-yellow-300"
+                                  className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-300 text-yellow-300"
                                 />
                               ))}
                               {[1, 2].map((star) => (
                                 <Star
                                   key={star}
-                                  className="h-4 w-4 text-yellow-300"
+                                  className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-300"
                                 />
                               ))}
                             </div>
