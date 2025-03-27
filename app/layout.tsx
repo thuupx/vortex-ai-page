@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Manage your images with AI-powered search, cleanup, and insights - all while keeping your data private with on-device processing.",
     type: "website",
     locale: "en_US",
-    url: "https://vortexai.app",
+    url: "https://vortexai.io.vn",
     images: [
       {
         url: "/og-image.png",
