@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import { Search, Zap, Sparkles, ArrowRight } from "lucide-react";
 
 export function HowItWorks() {

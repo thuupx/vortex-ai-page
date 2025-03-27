@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useState, useRef, type ReactNode } from "react";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 
 interface TiltCardProps {
   children: ReactNode;

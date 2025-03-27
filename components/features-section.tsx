@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Search, Trash2, MessageSquare, FileText } from "lucide-react";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client"
 import { TiltCard } from "@/components/tilt-card";
 
 export function FeaturesSection() {

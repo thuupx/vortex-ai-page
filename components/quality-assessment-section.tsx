@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Star, ImagePlus, Gauge, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -108,11 +108,11 @@ export function QualityAssessmentSection() {
               >
                 <div className="relative aspect-[3/4] w-full">
                   <Image
-                    src="/placeholder.svg?height=400&width=300"
+                    src="/placeholder.svg"
                     alt="High quality image"
                     width={300}
                     height={400}
-                    className="object-cover"
+                    className="object-cover w-auto h-auto"
                   />
                   <div className="absolute top-3 right-3 bg-primary-400 text-white font-bold rounded-full h-12 w-12 flex items-center justify-center border-2 border-white">
                     <span>9.8</span>
@@ -145,11 +145,11 @@ export function QualityAssessmentSection() {
               >
                 <div className="relative aspect-[3/4] w-full">
                   <Image
-                    src="/placeholder.svg?height=300&width=225"
+                    src="/placeholder.svg"
                     alt="Similar image with lower quality"
                     width={225}
                     height={300}
-                    className="object-cover"
+                    className="object-cover w-auto h-auto"
                   />
                   <div className="absolute top-3 right-3 bg-primary-200 text-primary-400 font-bold rounded-full h-10 w-10 flex items-center justify-center border-2 border-white">
                     <span>7.2</span>
@@ -166,11 +166,11 @@ export function QualityAssessmentSection() {
               >
                 <div className="relative aspect-[3/4] w-full">
                   <Image
-                    src="/placeholder.svg?height=250&width=187"
+                    src="/placeholder.svg"
                     alt="Similar image with lower quality"
                     width={187}
                     height={250}
-                    className="object-cover"
+                    className="object-cover w-auto h-auto"
                   />
                   <div className="absolute top-3 right-3 bg-primary-100 text-primary-400 font-bold rounded-full h-8 w-8 flex items-center justify-center border-2 border-white">
                     <span>6.5</span>

@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 
 export function TestimonialsSection() {
   const testimonials = [

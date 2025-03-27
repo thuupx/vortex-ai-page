@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { WaitlistForm } from "@/components/waitlist-form";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client"
 
 export function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -61,11 +61,12 @@ export function HeroSection() {
           >
             <div className="relative aspect-square w-full max-w-[400px] overflow-hidden rounded-xl border bg-white/50 backdrop-blur-sm md:rounded-2xl lg:max-w-none floating">
               <Image
-                src="/placeholder.svg?height=600&width=400"
+                src="/placeholder.svg"
                 alt="VortexAI App Screenshot"
                 width={400}
                 height={600}
-                className="object-cover"
+                className="object-cover w-auto h-auto"
+                priority
               />
             </div>
           </motion.div>
