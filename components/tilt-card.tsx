@@ -53,9 +53,7 @@ export function TiltCard({ children, className = "" }: TiltCardProps) {
         transformStyle: "preserve-3d",
       }}
       animate={{
-        rotateX: rotateX,
-        rotateY: rotateY,
-        scale: scale,
+        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`,
       }}
       transition={{
         type: "spring",
