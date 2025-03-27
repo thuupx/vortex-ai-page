@@ -193,7 +193,7 @@ export function QualityAssessmentSection() {
           </h3>
           <p className="text-primary-300/80">
             When you take multiple similar photos, it can be challenging to
-            decide which one to keep. VortexAI's Image Quality Assessment
+            decide which one to keep. VortexAI&apos;s Image Quality Assessment
             eliminates the guesswork by objectively analyzing each image and
             providing a quality score. This helps you maintain only the best
             images in your collection, saving storage space while preserving

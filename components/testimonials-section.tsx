@@ -50,7 +50,7 @@ export function TestimonialsSection() {
               What Our Users Say
             </h2>
             <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Hear from our beta testers who've experienced the power of
+              Hear from our beta testers who&apos;ve experienced the power of
               VortexAI.
             </p>
           </div>
