@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { sendWaitlistNotifications } from "@/lib/notifications";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -48,6 +49,14 @@ export async function POST(request: NextRequest) {
         referrer,
       },
     });
+
+    // Send notifications
+    try {
+      await sendWaitlistNotifications(email);
+    } catch (notificationError) {
+      console.error("Failed to send notifications:", notificationError);
+      // Continue with the response even if notifications fail
+    }
 
     return NextResponse.json(
       {

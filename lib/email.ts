@@ -48,14 +48,14 @@ export async function sendEmail({
 /**
  * Send a notification email when a new user joins the waitlist
  */
-export async function sendWaitlistNotification(
-  email: string
+export async function sendWaitlistEmailNotification(
+  email: string,
 ): Promise<boolean> {
   const adminEmail = process.env.ADMIN_EMAIL;
 
   if (!adminEmail) {
     console.warn(
-      "ADMIN_EMAIL environment variable not set. Notification not sent."
+      "ADMIN_EMAIL environment variable not set. Notification not sent.",
     );
     return false;
   }
