@@ -25,12 +25,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://vortexai.app",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "VortexAI - AI-Powered Image Management",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "VortexAI - AI-Powered Image Management",
     description:
       "Manage your images with AI-powered search, cleanup, and insights - all while keeping your data private with on-device processing.",
+    images: ["/og-image.png"],
   },
 };
 
