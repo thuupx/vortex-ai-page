@@ -55,7 +55,7 @@ export function FeaturesSection() {
     {
       icon: <MessageSquare className="h-12 w-12 text-primary-300 mb-2" />,
       title: "AI Chat Insights",
-      description: "Chat with AI to gain insights about your image collection.",
+      description: "Chat with AI to gain insights about your image collection and organization.",
       content:
         "Ask questions about your photos and get intelligent answers about content, patterns, and organization.",
     },
