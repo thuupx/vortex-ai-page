@@ -23,6 +23,8 @@ export function WaitlistForm() {
 
     setIsSubmitting(true);
 
+    const trimmedEmail = email.trim();
+
     try {
       // Call our API endpoint to save to the database
       const response = await fetch("/api/waitlist", {
@@ -30,7 +32,7 @@ export function WaitlistForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: trimmedEmail }),
       });
 
       const data = await response.json();

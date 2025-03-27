@@ -17,11 +17,12 @@ export async function POST(request: NextRequest) {
     if (!result.success) {
       return NextResponse.json(
         { error: "Invalid input", details: result.error.format() },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
     const { email } = result.data;
+    const trimmedEmail = email.trim();
 
     // Get additional information from the request
     const ipAddress = request.headers.get("x-forwarded-for") || "unknown";
@@ -30,20 +31,20 @@ export async function POST(request: NextRequest) {
 
     // Check if the email already exists
     const existingUser = await prisma.waitlistUser.findUnique({
-      where: { email },
+      where: { email: trimmedEmail },
     });
 
     if (existingUser) {
       return NextResponse.json(
         { message: "You're already on our waitlist!" },
-        { status: 200 },
+        { status: 200 }
       );
     }
 
     // Create a new waitlist entry
     const waitlistUser = await prisma.waitlistUser.create({
       data: {
-        email,
+        email: trimmedEmail,
         ipAddress,
         userAgent,
         referrer,
@@ -52,7 +53,7 @@ export async function POST(request: NextRequest) {
 
     // Send notifications
     try {
-      await sendWaitlistNotifications(email);
+      await sendWaitlistNotifications(trimmedEmail);
     } catch (notificationError) {
       console.error("Failed to send notifications:", notificationError);
       // Continue with the response even if notifications fail
@@ -63,13 +64,13 @@ export async function POST(request: NextRequest) {
         message: "Successfully joined the waitlist",
         userId: waitlistUser.id,
       },
-      { status: 201 },
+      { status: 201 }
     );
   } catch (error) {
     console.error("Waitlist submission error:", error);
     return NextResponse.json(
       { error: "Failed to join waitlist" },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
