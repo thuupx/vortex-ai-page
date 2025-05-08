@@ -42,7 +42,7 @@ export function WaitlistForm() {
       }
 
       toast.success(
-        "Thanks for joining our waitlist. We'll notify you when VortexAI launches.",
+        "Thanks for joining our waitlist. We'll notify you when PicetaAI launches.",
         {
           description: "You're on the list!",
         },

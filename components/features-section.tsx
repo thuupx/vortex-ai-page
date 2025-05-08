@@ -81,7 +81,7 @@ export function FeaturesSection() {
               Powerful Features
             </h2>
             <p className="max-w-[900px] text-primary-300/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              VortexAI combines cutting-edge AI with intuitive design to
+              PicetaAI combines cutting-edge AI with intuitive design to
               transform how you manage your images.
             </p>
           </div>

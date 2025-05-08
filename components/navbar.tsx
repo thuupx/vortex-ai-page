@@ -8,7 +8,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <span className="font-bold text-2xl text-primary-400">
-              Vortex<span className="text-primary-200">AI</span>
+              Piceta<span className="text-primary-200">AI</span>
             </span>
           </Link>
         </div>

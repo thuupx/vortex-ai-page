@@ -31,7 +31,7 @@ export function TermsOfService() {
           <div className="space-y-8">
             <Section title="1. Acceptance of Terms">
               <p className="mb-4 text-gray-500 dark:text-gray-400">
-                By downloading, installing, or using Vortex (&quot;the
+                By downloading, installing, or using Piceta (&quot;the
                 App&quot;), you agree to be bound by these Terms of Service. If
                 you do not agree to these terms, do not use the App.
               </p>
@@ -127,10 +127,10 @@ export function TermsOfService() {
               <p className="mb-4 text-gray-500 dark:text-gray-400">
                 For questions about these Terms, please contact us at:
                 <a
-                  href="mailto:legal@vortex.app"
+                  href="mailto:legal@thepiceta.com"
                   className="text-primary-600 hover:underline ml-1"
                 >
-                  legal@vortex.app
+                  legal@thepiceta.com
                 </a>
               </p>
             </Section>

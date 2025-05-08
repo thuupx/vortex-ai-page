@@ -8,11 +8,11 @@ export function Footer() {
           <div className="flex flex-col items-center gap-4 md:items-start md:gap-2">
             <Link href="/" className="flex items-center gap-2">
               <span className="font-bold text-xl text-primary-400">
-                Vortex<span className="text-primary-200">AI</span>
+                Piceta<span className="text-primary-200">AI</span>
               </span>
             </Link>
             <p className="text-center text-sm text-primary-300/70 md:text-left">
-              &copy; {new Date().getFullYear()} VortexAI. All rights reserved.
+              &copy; {new Date().getFullYear()} PicetaAI. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4">

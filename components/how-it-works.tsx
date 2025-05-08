@@ -40,7 +40,7 @@ export function HowItWorks() {
               How It Works
             </h2>
             <p className="max-w-[900px] text-primary-50/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Discover how VortexAI makes finding and managing your images
+              Discover how PicetaAI makes finding and managing your images
               effortless.
             </p>
           </div>

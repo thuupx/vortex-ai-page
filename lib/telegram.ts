@@ -47,7 +47,7 @@ export async function sendWaitlistTelegramNotification(
   const telegramMessage = `
 <b>New Waitlist Signup</b>
 
-A new user has joined the VortexAI waitlist:
+A new user has joined the PicetaAI waitlist:
 <b>Email:</b> ${email}
 <b>Time:</b> ${new Date().toLocaleString()}
   `;

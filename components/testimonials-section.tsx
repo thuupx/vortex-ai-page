@@ -16,7 +16,7 @@ export function TestimonialsSection() {
       name: "Alex Johnson",
       role: "Photographer",
       content:
-        "VortexAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
+        "PicetaAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
       avatar: "AJ",
     },
     {
@@ -51,7 +51,7 @@ export function TestimonialsSection() {
             </h2>
             <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Hear from our beta testers who&apos;ve experienced the power of
-              VortexAI.
+              PicetaAI.
             </p>
           </div>
         </motion.div>

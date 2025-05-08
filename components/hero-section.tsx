@@ -62,7 +62,7 @@ export function HeroSection() {
             <div className="relative aspect-square w-full max-w-[400px] overflow-hidden rounded-xl border bg-white/50 backdrop-blur-sm md:rounded-2xl lg:max-w-none floating">
               <Image
                 src="/placeholder.svg"
-                alt="VortexAI App Screenshot"
+                alt="PicetaAI App Screenshot"
                 width={400}
                 height={600}
                 className="object-cover w-auto h-auto"

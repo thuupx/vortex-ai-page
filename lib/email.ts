@@ -63,7 +63,7 @@ export async function sendWaitlistEmailNotification(
   const subject = "New Waitlist Signup";
   const html = `
     <h1>New Waitlist Signup</h1>
-    <p>A new user has joined the VortexAI waitlist:</p>
+    <p>A new user has joined the PicetaAI waitlist:</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
     <hr>

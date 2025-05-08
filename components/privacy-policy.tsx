@@ -114,10 +114,10 @@ export function PrivacyPolicy() {
                 If you have questions about this Privacy Policy, please contact
                 us at:
                 <a
-                  href="mailto:support@vortex.app"
+                  href="mailto:support@thepiceta.com"
                   className="text-primary-600 hover:underline ml-1"
                 >
-                  support@vortex.app
+                  support@thepiceta.com
                 </a>
               </p>
             </Section>

@@ -76,7 +76,7 @@ export function PrivacySection() {
               Offline Capability
             </h3>
             <p className="text-primary-300/80">
-              Use VortexAI even without an internet connection. Your privacy is
+              Use PicetaAI even without an internet connection. Your privacy is
               never compromised.
             </p>
           </motion.div>
