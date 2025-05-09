@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import LanguageToggle from "./language-toggle";
 
 export function Navbar() {
   return (
@@ -36,6 +37,7 @@ export function Navbar() {
           <Button asChild className="hidden md:flex">
             <Link href="#waitlist">Join Waitlist</Link>
           </Button>
+          <LanguageToggle />
         </div>
       </div>
     </header>
