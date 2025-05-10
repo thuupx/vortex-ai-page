@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import type React from "react";
 import "./globals.css";
+import I18nProvider from "./i18n-provider";
 
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
@@ -44,15 +45,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+import { cookies } from "next/headers";
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // SSR: get language from cookie or default to 'en'
+  let lang = "en";
+  try {
+    const cookieStore = await cookies();
+    lang = cookieStore.get("i18next")?.value || "en";
+
+  } catch {}
+  console.log("🚀 ~ lang:", lang)
+
   return (
-    <html>
+    <html lang={lang}>
       <body className={open_sans.className}>
-        {children}
+        <I18nProvider lang={lang}>{children}</I18nProvider>
         <Toaster />
         <SpeedInsights />
       </body>
