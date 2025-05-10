@@ -1,6 +1,13 @@
 "use client";
 import i18n from "@/i18n/config";
 import { useState } from "react";
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function LanguageToggle() {
   const [language, setLanguage] = useState(i18n.language);
@@ -13,25 +20,16 @@ export default function LanguageToggle() {
   };
 
   return (
-    <div className="flex gap-2 items-center">
-      <button
-        className={`px-3 py-1 rounded ${
-          language === "en" ? "bg-blue-500 text-white" : "bg-gray-200"
-        }`}
-        onClick={() => changeLanguage("en")}
-        aria-pressed={language === "en"}
-      >
-        English
-      </button>
-      <button
-        className={`px-3 py-1 rounded ${
-          language === "vi" ? "bg-blue-500 text-white" : "bg-gray-200"
-        }`}
-        onClick={() => changeLanguage("vi")}
-        aria-pressed={language === "vi"}
-      >
-        Tiếng Việt
-      </button>
+    <div className="flex items-center gap-2">
+      <Select value={language} onValueChange={changeLanguage}>
+        <SelectTrigger aria-label="Select language">
+          <SelectValue placeholder="Select language" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="en">EN</SelectItem>
+          <SelectItem value="vi">VI</SelectItem>
+        </SelectContent>
+      </Select>
     </div>
   );
 }

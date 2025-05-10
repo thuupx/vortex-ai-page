@@ -1,4 +1,67 @@
 {
-  "welcome": "Chào mừng bạn đến với trang web của chúng tôi!",
-  "description": "Đây là phiên bản tiếng Việt."
+  "navbar": {
+    "brand": "PicetaAI",
+    "features": "Tính năng",
+    "privacy": "Bảo mật",
+    "join_waitlist": "Tham gia danh sách đợi"
+  },
+  "hero": {
+    "headline": "Quản lý hình ảnh dễ dàng với <1>Trí tuệ nhân tạo</1>",
+    "description": "Tìm kiếm, dọn dẹp và khám phá thư viện ảnh của bạn bằng công nghệ AI bảo mật, hoạt động trực tiếp trên thiết bị."
+  },
+  "features": {
+    "section_title": "Tính năng vượt trội",
+    "section_desc": "PicetaAI kết hợp công nghệ AI hiện đại với giao diện thân thiện để mang đến trải nghiệm quản lý hình ảnh hoàn toàn mới.",
+    "smart_search_title": "Tìm kiếm thông minh",
+    "smart_search_desc": "Tìm ảnh ngay lập tức bằng văn bản mô tả hoặc ảnh tương tự.",
+    "smart_search_content": "Chỉ cần nhập mô tả hoặc chọn ảnh tương tự, PicetaAI sẽ tìm ra chính xác những bức ảnh liên quan mà bạn cần.",
+    "natural_language_title": "Tìm kiếm bằng ngôn ngữ tự nhiên",
+    "natural_language_desc": "Tìm ảnh như đang trò chuyện — đơn giản và trực quan.",
+    "natural_language_content": "Ví dụ: 'Cho tôi xem ảnh đi biển mùa hè năm ngoái' hoặc 'Ảnh có chú chó của tôi' — PicetaAI sẽ hiểu và phản hồi ngay.",
+    "duplicate_cleanup_title": "Dọn ảnh trùng",
+    "duplicate_cleanup_desc": "Phát hiện ảnh trùng hoặc tương tự và đề xuất xóa thông minh.",
+    "duplicate_cleanup_content": "Giữ thư viện gọn gàng và tối ưu dung lượng chỉ với một lần quét.",
+    "ai_chat_title": "Trợ lý ảnh AI",
+    "ai_chat_desc": "Trò chuyện với AI để hiểu rõ và sắp xếp ảnh hiệu quả hơn.",
+    "ai_chat_content": "Hỏi AI về ảnh trong thư viện để khám phá nội dung, xu hướng và cách tổ chức thông minh."
+  },
+  "quality": {
+    "advanced_feature": "Tính năng nâng cao",
+    "section_title": "Đánh giá chất lượng hình ảnh",
+    "section_desc": "AI tiên tiến đánh giá ảnh dựa trên yếu tố thẩm mỹ và kỹ thuật — hoàn toàn trên thiết bị để bảo vệ quyền riêng tư.",
+    "aesthetic_title": "Đánh giá thẩm mỹ",
+    "aesthetic_desc": "Đánh giá bố cục, màu sắc và mức độ thu hút thị giác",
+    "technical_title": "Phân tích kỹ thuật",
+    "technical_desc": "Đo độ nét, nhiễu và độ chính xác ánh sáng",
+    "comparative_title": "So sánh chất lượng",
+    "comparative_desc": "So sánh các ảnh tương tự để chọn ra ảnh đẹp nhất",
+    "recommendations_title": "Khuyến nghị thông minh",
+    "recommendations_desc": "Đề xuất giữ lại ảnh dựa trên điểm chất lượng tổng thể",
+    "why_title": "Tại sao đánh giá chất lượng quan trọng",
+    "why_desc": "Khi chụp nhiều ảnh tương tự, thật khó chọn ra ảnh tốt nhất. PicetaAI giúp bạn quyết định dễ dàng hơn bằng cách phân tích chất lượng khách quan để chỉ giữ lại những bức ảnh nổi bật — tiết kiệm dung lượng và lưu giữ khoảnh khắc đẹp.",
+    "good_quality": "Chất lượng tốt",
+    "average_quality": "Chất lượng trung bình",
+    "best_quality": "Chất lượng tốt nhất"
+  },
+  "how": {
+    "section_title": "Cách PicetaAI hoạt động",
+    "section_desc": "Tìm hiểu cách PicetaAI giúp bạn tìm kiếm và quản lý ảnh dễ dàng hơn.",
+    "describe_title": "Mô tả hoặc tải lên",
+    "describe_desc": "Nhập mô tả tự nhiên hoặc tải ảnh lên để bắt đầu tìm kiếm.",
+    "ai_title": "Xử lý AI",
+    "ai_desc": "AI trên thiết bị xử lý truy vấn và tìm ảnh phù hợp trong thư viện.",
+    "instant_title": "Kết quả tức thì",
+    "instant_desc": "Trả kết quả nhanh chóng và chính xác — không có dữ liệu nào rời khỏi thiết bị của bạn."
+  },
+  "privacy": {
+    "section_title": "Ưu tiên bảo mật"
+  },
+  "testimonials": {
+    "alex_name": "Alex Johnson",
+    "alex_role": "Nhiếp ảnh gia",
+    "alex_content": "PicetaAI đã thay đổi hoàn toàn cách tôi tổ chức thư viện ảnh."
+  },
+  "footer": {
+    "copyright": " PicetaAI. Đã đăng ký bản quyền."
+  }
 }

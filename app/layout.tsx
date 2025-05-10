@@ -1,11 +1,11 @@
-import type React from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
+import type React from "react";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PicetaAI - AI-Powered Image Management",
@@ -50,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html>
+      <body className={open_sans.className}>
         {children}
         <Toaster />
         <SpeedInsights />

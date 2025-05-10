@@ -2,9 +2,11 @@
 
 import { Shield, Lock, Smartphone } from "lucide-react";
 import * as motion from "motion/react-client";
+import { useTranslation } from "react-i18next";
 
 export function PrivacySection() {
-  return (
+  const { t } = useTranslation();
+return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative" id="privacy">
       <div className="absolute inset-0 bg-gradient-to-t from-primary-50/50 to-white z-0"></div>
       <div className="container px-4 md:px-6 relative z-10">
@@ -17,11 +19,11 @@ export function PrivacySection() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400">
-              Privacy First
+              {t('privacy.section_title')}
             </h2>
             <p className="max-w-[900px] text-primary-300/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Your data never leaves your device. All AI processing happens
-              locally.
+              {/* TODO: Add translation key for this privacy description if needed */}
+              Your data never leaves your device. All AI processing happens locally.
             </p>
           </div>
         </motion.div>

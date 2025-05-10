@@ -2,26 +2,25 @@
 
 import * as motion from "motion/react-client";
 import { Search, Zap, Sparkles, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function HowItWorks() {
+  const { t } = useTranslation();
   const steps = [
     {
       icon: <Search className="h-8 w-8 text-primary-50" />,
-      title: "Describe or Upload",
-      description:
-        "Use natural language to describe what you're looking for or upload a similar image.",
+      title: t("how.describe_title"),
+      description: t("how.describe_desc"),
     },
     {
       icon: <Zap className="h-8 w-8 text-primary-50" />,
-      title: "AI Processing",
-      description:
-        "Our on-device AI analyzes your request and searches through your image collection.",
+      title: t("how.ai_title"),
+      description: t("how.ai_desc"),
     },
     {
       icon: <Sparkles className="h-8 w-8 text-primary-50" />,
-      title: "Instant Results",
-      description:
-        "Get accurate results instantly, with no data ever leaving your device.",
+      title: t("how.instant_title"),
+      description: t("how.instant_desc"),
     },
   ];
 
@@ -37,11 +36,10 @@ export function HowItWorks() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              How It Works
+              {t("how.section_title")}
             </h2>
             <p className="max-w-[900px] text-primary-50/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Discover how PicetaAI makes finding and managing your images
-              effortless.
+              {t("how.section_desc")}
             </p>
           </div>
         </motion.div>

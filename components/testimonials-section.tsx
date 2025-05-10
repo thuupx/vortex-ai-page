@@ -11,7 +11,8 @@ import {
 import * as motion from "motion/react-client";
 
 export function TestimonialsSection() {
-  const testimonials = [
+
+const testimonials = [
     {
       name: "Alex Johnson",
       role: "Photographer",

@@ -10,6 +10,7 @@ import {
 import { Search, Trash2, MessageSquare, FileText } from "lucide-react";
 import * as motion from "motion/react-client";
 import { TiltCard } from "@/components/tilt-card";
+import { useTranslation } from "react-i18next";
 
 export function FeaturesSection() {
   const container = {
@@ -27,38 +28,31 @@ export function FeaturesSection() {
     show: { opacity: 1, y: 0 },
   };
 
-  const features = [
+  const { t } = useTranslation();
+const features = [
     {
       icon: <Search className="h-12 w-12 text-primary-300 mb-2" />,
-      title: "Smart Image Search",
-      description:
-        "Find any image instantly with text or image-based search powered by AI.",
-      content:
-        "Search by describing what you're looking for or upload a similar image to find matches in your collection.",
+      title: t('features.smart_search_title'),
+      description: t('features.smart_search_desc'),
+      content: t('features.smart_search_content'),
     },
     {
       icon: <FileText className="h-12 w-12 text-primary-300 mb-2" />,
-      title: "Natural Language Search",
-      description:
-        "Search your images using everyday language and conversational queries.",
-      content:
-        'Ask "Show me beach photos from last summer" or "Find pictures with my dog" and get instant, accurate results.',
+      title: t('features.natural_language_title'),
+      description: t('features.natural_language_desc'),
+      content: t('features.natural_language_content'),
     },
     {
       icon: <Trash2 className="h-12 w-12 text-primary-300 mb-2" />,
-      title: "Duplicate Cleanup",
-      description:
-        "Automatically identify and remove duplicate or similar images.",
-      content:
-        "Free up storage space and keep your collection organized with intelligent duplicate detection.",
+      title: t('features.duplicate_cleanup_title'),
+      description: t('features.duplicate_cleanup_desc'),
+      content: t('features.duplicate_cleanup_content'),
     },
     {
       icon: <MessageSquare className="h-12 w-12 text-primary-300 mb-2" />,
-      title: "AI Chat Insights",
-      description:
-        "Chat with AI to gain insights about your image collection and organization.",
-      content:
-        "Ask questions about your photos and get intelligent answers about content, patterns, and organization.",
+      title: t('features.ai_chat_title'),
+      description: t('features.ai_chat_desc'),
+      content: t('features.ai_chat_content'),
     },
   ];
 
@@ -78,11 +72,10 @@ export function FeaturesSection() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400">
-              Powerful Features
+              {t('features.section_title')}
             </h2>
             <p className="max-w-[900px] text-primary-300/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              PicetaAI combines cutting-edge AI with intuitive design to
-              transform how you manage your images.
+              {t('features.section_desc')}
             </p>
           </div>
         </motion.div>

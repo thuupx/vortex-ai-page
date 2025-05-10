@@ -1,4 +1,67 @@
 {
-  "welcome": "Welcome to our site!",
-  "description": "This is the English version."
+  "navbar": {
+    "brand": "PicetaAI",
+    "features": "Features",
+    "privacy": "Privacy",
+    "join_waitlist": "Join Waitlist"
+  },
+  "hero": {
+    "headline": "Manage Your Images with <1>AI-Powered Intelligence</1>",
+    "description": "Search, clean up, and gain insights from your image collection with privacy-first, on-device AI technology."
+  },
+  "features": {
+    "section_title": "Powerful Features",
+    "section_desc": "PicetaAI combines cutting-edge AI with intuitive design to transform how you manage your images.",
+    "smart_search_title": "Smart Image Search",
+    "smart_search_desc": "Find any image instantly with text or image-based search powered by AI.",
+    "smart_search_content": "Search by describing what you're looking for or upload a similar image to find matches in your collection.",
+    "natural_language_title": "Natural Language Search",
+    "natural_language_desc": "Search your images using everyday language and conversational queries.",
+    "natural_language_content": "Ask \"Show me beach photos from last summer\" or \"Find pictures with my dog\" and get instant, accurate results.",
+    "duplicate_cleanup_title": "Duplicate Cleanup",
+    "duplicate_cleanup_desc": "Automatically identify and remove duplicate or similar images.",
+    "duplicate_cleanup_content": "Free up storage space and keep your collection organized with intelligent duplicate detection.",
+    "ai_chat_title": "AI Chat Insights",
+    "ai_chat_desc": "Chat with AI to gain insights about your image collection and organization.",
+    "ai_chat_content": "Ask questions about your photos and get intelligent answers about content, patterns, and organization."
+  },
+  "quality": {
+    "advanced_feature": "Advanced Feature",
+    "section_title": "Image Quality Assessment",
+    "section_desc": "Our state-of-the-art AI evaluates your images based on both aesthetic and technical factors, all while running completely on your device for maximum privacy.",
+    "aesthetic_title": "Aesthetic Evaluation",
+    "aesthetic_desc": "Analyzes composition, color harmony, and visual appeal",
+    "technical_title": "Technical Analysis",
+    "technical_desc": "Measures sharpness, noise levels, and exposure accuracy",
+    "comparative_title": "Comparative Scoring",
+    "comparative_desc": "Ranks similar images to identify the highest quality version",
+    "recommendations_title": "Smart Recommendations",
+    "recommendations_desc": "Suggests which images to keep based on quality scores",
+    "why_title": "Why Quality Assessment Matters",
+    "why_desc": "When you take multiple similar photos, it can be challenging to decide which one to keep. PicetaAI's Image Quality Assessment eliminates the guesswork by objectively analyzing each image and providing a quality score. This helps you maintain only the best images in your collection, saving storage space while preserving your most valuable memories.",
+    "good_quality": "Good Quality",
+    "average_quality": "Average Quality",
+    "best_quality": "Best Quality"
+  },
+  "how": {
+    "section_title": "How It Works",
+    "section_desc": "Discover how PicetaAI makes finding and managing your images effortless.",
+    "describe_title": "Describe or Upload",
+    "describe_desc": "Use natural language to describe what you're looking for or upload a similar image.",
+    "ai_title": "AI Processing",
+    "ai_desc": "Our on-device AI analyzes your request and searches through your image collection.",
+    "instant_title": "Instant Results",
+    "instant_desc": "Get accurate results instantly, with no data ever leaving your device."
+  },
+  "privacy": {
+    "section_title": "Privacy First"
+  },
+  "testimonials": {
+    "alex_name": "Alex Johnson",
+    "alex_role": "Photographer",
+    "alex_content": "PicetaAI has completely transformed how I organize my photo library."
+  },
+  "footer": {
+    "copyright": "© {{year}} PicetaAI. All rights reserved."
+  }
 }

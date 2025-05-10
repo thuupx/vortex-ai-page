@@ -5,6 +5,8 @@ import Image from "next/image";
 import { WaitlistForm } from "@/components/waitlist-form";
 import * as motion from "motion/react-client";
 
+import { useTranslation, Trans } from "react-i18next";
+
 export function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bubbleCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -128,7 +130,8 @@ export function HeroSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+  const { t } = useTranslation();
+return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden relative">
       <div className="absolute inset-0 bg-blue-gradient opacity-10 z-0"></div>
       {/* Bubble Animation Canvas */}
@@ -153,14 +156,12 @@ export function HeroSection() {
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Manage Your Images with{" "}
-                <span className="gradient-text font-extrabold">
-                  AI-Powered Intelligence
-                </span>
+                <Trans i18nKey="hero.headline">
+                  Manage Your Images with <span className="gradient-text font-extrabold">AI-Powered Intelligence</span>
+                </Trans>
               </h1>
               <p className="max-w-[600px] text-primary-400/80 md:text-xl">
-                Search, clean up, and gain insights from your image collection
-                with privacy-first, on-device AI technology.
+                {t('hero.description')}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 min-[400px]:flex-row">
