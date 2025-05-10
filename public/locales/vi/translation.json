@@ -54,12 +54,46 @@
     "instant_desc": "Trả kết quả nhanh chóng và chính xác — không có dữ liệu nào rời khỏi thiết bị của bạn."
   },
   "privacy": {
-    "section_title": "Ưu tiên bảo mật"
+    "section_title": "Ưu tiên bảo mật",
+    "section_desc": "Dữ liệu của bạn không bao giờ rời khỏi thiết bị. Mọi xử lý AI đều được thực hiện cục bộ.",
+    "features": [
+      {
+        "title": "Xử lý trên thiết bị",
+        "desc": "Tất cả thao tác AI đều thực hiện trực tiếp trên thiết bị, đảm bảo hình ảnh của bạn luôn thuộc quyền kiểm soát của bạn."
+      },
+      {
+        "title": "Không lưu trữ đám mây",
+        "desc": "Khác với các ứng dụng khác, chúng tôi không lưu ảnh của bạn trên đám mây. Ảnh luôn ở trên thiết bị của bạn."
+      },
+      {
+        "title": "Sử dụng ngoại tuyến",
+        "desc": "Dùng PicetaAI ngay cả khi không có kết nối internet. Quyền riêng tư của bạn luôn được đảm bảo."
+      }
+    ]
   },
   "testimonials": {
-    "alex_name": "Alex Johnson",
-    "alex_role": "Nhiếp ảnh gia",
-    "alex_content": "PicetaAI đã thay đổi hoàn toàn cách tôi tổ chức thư viện ảnh."
+    "section_title": "Người dùng nói gì",
+    "section_desc": "Lắng nghe chia sẻ từ những người đã trải nghiệm PicetaAI.",
+    "items": [
+      {
+        "name": "Sarah Chen",
+        "role": "Nghệ sĩ kỹ thuật số",
+        "content": "Là người có hàng ngàn ảnh tham khảo, tính năng dọn dẹp ảnh trùng đã giúp tôi tiết kiệm rất nhiều dung lượng. Ưu tiên quyền riêng tư là điều tôi cần.",
+        "avatar": "SC"
+      },
+      {
+        "name": "Michael Rodriguez",
+        "role": "Blogger du lịch",
+        "content": "Tính năng trò chuyện AI giúp tôi phân loại và gắn thẻ ảnh du lịch tự động. Như có một trợ lý cá nhân hiểu bộ sưu tập ảnh của tôi.",
+        "avatar": "MR"
+      },
+      {
+        "name": "Alex Johnson",
+        "role": "Photographer",
+        "content": "PicetaAI đã hoàn toàn thay đổi cách tôi tổ chức thư viện ảnh. Tìm kiếm bằng ngôn ngữ tự nhiên giống như phép thuật - tôi có thể tìm thấy bất kỳ ảnh nào chỉ bằng cách mô tả nó!",
+        "avatar": "AJ"
+      }
+    ]
   },
   "footer": {
     "copyright": " PicetaAI. Đã đăng ký bản quyền."

@@ -9,32 +9,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import * as motion from "motion/react-client";
+import { useTranslation } from "react-i18next";
 
 export function TestimonialsSection() {
-
-const testimonials = [
-    {
-      name: "Alex Johnson",
-      role: "Photographer",
-      content:
-        "PicetaAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
-      avatar: "AJ",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Digital Artist",
-      content:
-        "As someone with thousands of reference images, the duplicate cleanup feature has saved me so much storage space. The privacy-first approach is exactly what I needed.",
-      avatar: "SC",
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Travel Blogger",
-      content:
-        "The AI chat feature helps me categorize and tag my travel photos automatically. It's like having a personal assistant that understands my photo collection.",
-      avatar: "MR",
-    },
-  ];
+  const { t } = useTranslation();
+  const testimonials = t("testimonials.items", {
+    returnObjects: true,
+  }) as Array<{
+    name: string;
+    role: string;
+    content: string;
+    avatar: string;
+  }>;
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 gradient-bg">
@@ -48,47 +34,47 @@ const testimonials = [
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-              What Our Users Say
+              {t("testimonials.section_title")}
             </h2>
             <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Hear from our beta testers who&apos;ve experienced the power of
-              PicetaAI.
+              {t("testimonials.section_desc")}
             </p>
           </div>
         </motion.div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 mt-12">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full bg-white/90 backdrop-blur-sm border-none shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <Avatar>
-                      <AvatarFallback className="bg-primary-200 text-white">
-                        {testimonial.avatar}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <CardTitle className="text-primary-400">
-                        {testimonial.name}
-                      </CardTitle>
-                      <CardDescription className="text-primary-300">
-                        {testimonial.role}
-                      </CardDescription>
+          {testimonials.map &&
+            testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white/90 backdrop-blur-sm border-none shadow-lg">
+                  <CardHeader>
+                    <div className="flex items-center gap-4">
+                      <Avatar>
+                        <AvatarFallback className="bg-primary-200 text-white">
+                          {testimonial.avatar}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <CardTitle className="text-primary-400">
+                          {testimonial.name}
+                        </CardTitle>
+                        <CardDescription className="text-primary-300">
+                          {testimonial.role}
+                        </CardDescription>
+                      </div>
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-primary-400/80">{testimonial.content}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-primary-400/80">{testimonial.content}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 "use client";
 
+import { Search, Sparkles, Zap } from "lucide-react";
 import * as motion from "motion/react-client";
-import { Search, Zap, Sparkles, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export function HowItWorks() {
@@ -59,12 +59,6 @@ export function HowItWorks() {
               </div>
               <h3 className="text-xl font-bold">{step.title}</h3>
               <p className="text-primary-50/90">{step.description}</p>
-
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-20 left-[calc(33.33%*1.5-10px)] transform -translate-x-1/2">
-                  <ArrowRight className="h-8 w-8 text-primary-100" />
-                </div>
-              )}
             </motion.div>
           ))}
         </div>

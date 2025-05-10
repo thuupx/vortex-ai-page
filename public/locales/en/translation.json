@@ -54,12 +54,46 @@
     "instant_desc": "Get accurate results instantly, with no data ever leaving your device."
   },
   "privacy": {
-    "section_title": "Privacy First"
+    "section_title": "Privacy First",
+    "section_desc": "Your data never leaves your device. All AI processing happens locally.",
+    "features": [
+      {
+        "title": "On-Device Processing",
+        "desc": "All AI operations run directly on your device, ensuring your images never leave your control."
+      },
+      {
+        "title": "No Cloud Storage",
+        "desc": "Unlike other apps, we don’t store your images in the cloud. Your photos stay on your device."
+      },
+      {
+        "title": "Offline Capability",
+        "desc": "Use PicetaAI even without an internet connection. Your privacy is never compromised."
+      }
+    ]
   },
   "testimonials": {
-    "alex_name": "Alex Johnson",
-    "alex_role": "Photographer",
-    "alex_content": "PicetaAI has completely transformed how I organize my photo library."
+    "section_title": "What Our Users Say",
+    "section_desc": "Hear from our beta testers who've experienced the power of PicetaAI.",
+    "items": [
+      {
+        "name": "Sarah Chen",
+        "role": "Digital Artist",
+        "content": "As someone with thousands of reference images, the duplicate cleanup feature has saved me so much storage space. The privacy-first approach is exactly what I needed.",
+        "avatar": "SC"
+      },
+      {
+        "name": "Michael Rodriguez",
+        "role": "Travel Blogger",
+        "content": "The AI chat feature helps me categorize and tag my travel photos automatically. It's like having a personal assistant that understands my photo collection.",
+        "avatar": "MR"
+      },
+      {
+        "name": "Alex Johnson",
+        "role": "Photographer",
+        "content": "PicetaAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
+        "avatar": "AJ"
+      }
+    ]
   },
   "footer": {
     "copyright": "© {{year}} PicetaAI. All rights reserved."
