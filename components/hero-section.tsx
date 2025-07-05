@@ -6,12 +6,10 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-
 export function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bubbleCanvasRef = useRef<HTMLCanvasElement>(null);
-  const t = useTranslations('hero');
-
+  const t = useTranslations("hero");
 
   // Bubble Animation Effect
   useEffect(() => {
@@ -156,11 +154,11 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                {t('title')}
+              <h1 className="gradient-text font-extrabold text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                {t("title")}
               </h1>
               <p className="max-w-[600px] text-primary-400/80 md:text-xl">
-                {t('subtitle')}
+                {t("subtitle")}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 min-[400px]:flex-row">

@@ -8,32 +8,32 @@
     "waitlist": "Join Waitlist"
   },
   "hero": {
-    "title": "Welcome to Vortex AI Page",
-    "subtitle": "Harness AI to transform your workflow."
+    "title": "Meet PicetaAI - AI for Photo Management",
+    "subtitle": "Use AI to take control of your photo workflow."
   },
   "features": {
-    "sectionTitle": "Powerful Features",
-    "sectionDescription": "PicetaAI combines cutting-edge AI with intuitive design to transform how you manage your images.",
+    "sectionTitle": "Smart Features to Simplify Photo Management",
+    "sectionDescription": "PicetaAI blends advanced AI with a user-friendly design to help you find, organize, and clean up your photo library effortlessly.",
     "features": [
       {
-        "title": "Smart Image Search",
-        "description": "Find any image instantly with text or image-based search powered by AI.",
-        "content": "Search by describing what you're looking for or upload a similar image to find matches in your collection."
+        "title": "AI-Powered Image Search",
+        "description": "Find images instantly using text prompts or similar images.",
+        "content": "Just describe the photo or upload a similar one — AI will quickly find the match from your library."
       },
       {
-        "title": "Natural Language Search",
-        "description": "Search your images using everyday language and conversational queries.",
-        "content": "Ask 'Show me beach photos from last summer' or 'Find pictures with my dog' and get instant, accurate results."
+        "title": "Search with Natural Language",
+        "description": "Talk to your photo library like you would to a friend.",
+        "content": "Type or say things like 'Show beach photos from last summer' — PicetaAI understands and delivers instantly."
       },
       {
-        "title": "Duplicate Cleanup",
-        "description": "Automatically identify and remove duplicate or similar images.",
-        "content": "Free up storage space and keep your collection organized with intelligent duplicate detection."
+        "title": "Clean Up Duplicate Photos",
+        "description": "Automatically detect and remove duplicate or similar images.",
+        "content": "Keep your library tidy and save storage by letting AI handle redundant photos."
       },
       {
-        "title": "AI Chat Insights",
-        "description": "Chat with AI to gain insights about your image collection and organization.",
-        "content": "Ask questions about your photos and get intelligent answers about content, patterns, and organization."
+        "title": "Chat with AI About Your Photos",
+        "description": "Get smart suggestions and insights just by asking.",
+        "content": "Ask questions like 'How many photos did I take in Paris?' or 'Which albums need sorting?' and let AI assist you."
       }
     ]
   },
@@ -120,7 +120,7 @@
     "sarahChenContent": "As someone with thousands of reference images, the duplicate cleanup feature has saved me so much storage space. The privacy-first approach is exactly what I needed.",
     "michaelRodriguez": "Michael Rodriguez",
     "travelBlogger": "Travel Blogger",
-    "michaelRodriguezContent": "The AI chat feature helps me categorize and tag my travel photos automatically. It's like having a personal assistant that understands my photo collection."
+    "michaelRodriguezContent": "The AI chat feature helps me find and manage my photos. It's like having a personal assistant that understands my photo collection."
   },
   "privacy": {
     "sectionTitle": "Privacy First",
