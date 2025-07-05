@@ -1,9 +1,11 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 export function Navbar() {
   const t = useTranslations('navbar');
+  console.log(t('features'));
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
