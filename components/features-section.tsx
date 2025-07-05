@@ -93,7 +93,7 @@ export function FeaturesSection() {
               className="perspective-1000"
             >
               <TiltCard>
-                <Card className="h-full border-primary-100 bg-white/80 backdrop-blur-sm transition-all duration-300 overflow-hidden">
+                <Card className="h-[360px] border-primary-100 bg-white/80 backdrop-blur-sm transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-primary-100/30 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                   <CardHeader className="pb-2 relative z-10">
                     {feature.icon}

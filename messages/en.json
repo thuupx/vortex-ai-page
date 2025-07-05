@@ -96,7 +96,12 @@
         "title": "Privacy-First Assessment",
         "description": "All analysis happens on-device for complete privacy and security."
       }
-    ]
+    ],
+    "bestQuality": "Best Quality",
+    "goodQuality": "Good Quality",
+    "averageQuality": "Average Quality",
+    "whyMattersTitle": "Why Quality Assessment Matters",
+    "whyMattersDesc": "When you take multiple similar photos, it can be challenging to decide which one to keep. PicetaAI's Image Quality Assessment eliminates the guesswork by objectively analyzing each image and providing a quality score. This helps you maintain only the best images in your collection, saving storage space while preserving your most valuable memories."
   },
   "testimonials": {
     "sectionTitle": "What Our Users Say",
