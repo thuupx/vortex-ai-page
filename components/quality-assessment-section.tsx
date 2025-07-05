@@ -1,8 +1,10 @@
+// All user-facing strings are internationalized using next-intl. See messages/en.json and messages/vi.json for translation keys.
 "use client";
 
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Star, ImagePlus, Gauge, Award } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/card";
 import { TiltCard } from "@/components/tilt-card";
 import { useEffect, useRef } from "react";
@@ -10,27 +12,27 @@ import { useEffect, useRef } from "react";
 import "@splidejs/splide/css";
 
 export function QualityAssessmentSection() {
+  const t = useTranslations("qualityAssessment");
   const qualityFactors = [
     {
       icon: <Star className="h-6 w-6 text-primary-300" />,
-      title: "Aesthetic Evaluation",
-      description: "Analyzes composition, color harmony, and visual appeal",
+      title: t("qualityFactors.0.title"),
+      description: t("qualityFactors.0.description"),
     },
     {
       icon: <Gauge className="h-6 w-6 text-primary-300" />,
-      title: "Technical Analysis",
-      description: "Measures sharpness, noise levels, and exposure accuracy",
+      title: t("qualityFactors.1.title"),
+      description: t("qualityFactors.1.description"),
     },
     {
       icon: <ImagePlus className="h-6 w-6 text-primary-300" />,
-      title: "Comparative Scoring",
-      description:
-        "Ranks similar images to identify the highest quality version",
+      title: t("qualityFactors.2.title"),
+      description: t("qualityFactors.2.description"),
     },
     {
       icon: <Award className="h-6 w-6 text-primary-300" />,
-      title: "Smart Recommendations",
-      description: "Suggests which images to keep based on quality scores",
+      title: t("qualityFactors.3.title"),
+      description: t("qualityFactors.3.description"),
     },
   ];
 
@@ -50,13 +52,13 @@ export function QualityAssessmentSection() {
           pagination: true,
           pauseOnHover: false,
           pauseOnFocus: false,
-          width: '100%',
-          fixedWidth: '100%',
-          fixedHeight: 'auto',
+          width: "100%",
+          fixedWidth: "100%",
+          fixedHeight: "auto",
           heightRatio: 1.5,
-          focus: 'center',
+          focus: "center",
           trimSpace: false,
-          gap: '1rem',
+          gap: "1rem",
         });
 
         splide.mount();
@@ -88,15 +90,13 @@ export function QualityAssessmentSection() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-1 rounded-full bg-primary-100 text-primary-400 text-sm font-medium mb-2">
-              Advanced Feature
+              {t("advancedFeature")}
             </span>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary-400">
-              Image Quality Assessment
+              {t("sectionTitle")}
             </h2>
             <p className="text-lg text-primary-300/80 max-w-[600px]">
-              Our state-of-the-art AI evaluates your images based on both
-              aesthetic and technical factors, all while running completely on
-              your device for maximum privacy.
+              {t("sectionDescription")}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
@@ -159,7 +159,7 @@ export function QualityAssessmentSection() {
                         <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
                             <span className="font-medium text-green-600 text-xs sm:text-sm">
-                              Best Quality
+                              {t("bestQuality")}
                             </span>
                             <div className="flex">
                               {[1, 2, 3, 4, 5].map((star) => (
@@ -192,7 +192,7 @@ export function QualityAssessmentSection() {
                         <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
                             <span className="font-medium text-green-300 text-xs sm:text-sm">
-                              Good Quality
+                              {t("goodQuality")}
                             </span>
                             <div className="flex">
                               {[1, 2, 3, 4].map((star) => (
@@ -226,7 +226,7 @@ export function QualityAssessmentSection() {
                         <div className="p-2 sm:p-3 bg-white">
                           <div className="flex items-center justify-between">
                             <span className="font-medium text-yellow-300 text-xs sm:text-sm">
-                              Average Quality
+                              {t("averageQuality")}
                             </span>
                             <div className="flex">
                               {[1, 2, 3].map((star) => (
@@ -261,16 +261,9 @@ export function QualityAssessmentSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <h3 className="text-xl font-bold text-primary-400 mb-2">
-            Why Quality Assessment Matters
+            {t("whyMattersTitle")}
           </h3>
-          <p className="text-primary-300/80">
-            When you take multiple similar photos, it can be challenging to
-            decide which one to keep. PicetaAI&apos;s Image Quality Assessment
-            eliminates the guesswork by objectively analyzing each image and
-            providing a quality score. This helps you maintain only the best
-            images in your collection, saving storage space while preserving
-            your most valuable memories.
-          </p>
+          <p className="text-primary-300/80">{t("whyMattersDesc")}</p>
         </motion.div>
       </div>
     </section>

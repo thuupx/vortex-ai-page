@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
+  const t = useTranslations('footer');
   return (
     <footer className="w-full border-t border-primary-100 bg-white py-6 md:py-12">
       <div className="container px-4 md:px-6">
@@ -12,7 +14,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-center text-sm text-primary-300/70 md:text-left">
-              &copy; {new Date().getFullYear()} PicetaAI. All rights reserved.
+              &copy; {new Date().getFullYear()} {t('copyright')}
             </p>
           </div>
           <div className="flex gap-4">
@@ -20,19 +22,19 @@ export function Footer() {
               href="/privacy"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
-              Privacy Policy
+              {t('privacy')}
             </Link>
             <Link
               href="/terms"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
-              Terms of Service
+              {t('terms')}
             </Link>
             <Link
               href="mailto:xuanthu404@gmail.com"
               className="text-sm text-primary-300 hover:text-primary-400"
             >
-              Contact
+              {t('contact')}
             </Link>
           </div>
         </div>

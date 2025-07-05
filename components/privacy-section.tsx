@@ -3,7 +3,10 @@
 import { Shield, Lock, Smartphone } from "lucide-react";
 import * as motion from "motion/react-client";
 
+import { useTranslations } from "next-intl";
+
 export function PrivacySection() {
+  const t = useTranslations('privacy');
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative" id="privacy">
       <div className="absolute inset-0 bg-gradient-to-t from-primary-50/50 to-white z-0"></div>
@@ -17,11 +20,10 @@ export function PrivacySection() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400">
-              Privacy First
+              {t('sectionTitle')}
             </h2>
             <p className="max-w-[900px] text-primary-300/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Your data never leaves your device. All AI processing happens
-              locally.
+              {t('sectionDescription')}
             </p>
           </div>
         </motion.div>
@@ -37,11 +39,10 @@ export function PrivacySection() {
               <Shield className="h-8 w-8 text-primary-400" />
             </div>
             <h3 className="text-xl font-bold text-primary-400">
-              On-Device Processing
+              {t('onDeviceTitle')}
             </h3>
             <p className="text-primary-300/80">
-              All AI operations run directly on your device, ensuring your
-              images never leave your control.
+              {t('onDeviceDesc')}
             </p>
           </motion.div>
           <motion.div
@@ -55,11 +56,10 @@ export function PrivacySection() {
               <Lock className="h-8 w-8 text-primary-400" />
             </div>
             <h3 className="text-xl font-bold text-primary-400">
-              No Cloud Storage
+              {t('noCloudTitle')}
             </h3>
             <p className="text-primary-300/80">
-              Unlike other apps, we don&apos;t store your images in the cloud.
-              Your photos stay on your device.
+              {t('noCloudDesc')}
             </p>
           </motion.div>
           <motion.div
@@ -73,11 +73,10 @@ export function PrivacySection() {
               <Smartphone className="h-8 w-8 text-primary-400" />
             </div>
             <h3 className="text-xl font-bold text-primary-400">
-              Offline Capability
+              {t('offlineTitle')}
             </h3>
             <p className="text-primary-300/80">
-              Use PicetaAI even without an internet connection. Your privacy is
-              never compromised.
+              {t('offlineDesc')}
             </p>
           </motion.div>
         </div>

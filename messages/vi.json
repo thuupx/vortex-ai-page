@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "home": "Trang chủ",
+    "features": "Tính năng",
+    "howItWorks": "Cách hoạt động",
+    "privacy": "Bảo mật",
+    "testimonials": "Nhận xét",
+    "waitlist": "Tham gia danh sách chờ"
+  },
+  "hero": {
+    "title": "Chào mừng đến với Vortex AI Page",
+    "subtitle": "Khai thác AI để chuyển đổi quy trình làm việc của bạn."
+  },
+  "features": {
+    "sectionTitle": "Tính năng mạnh mẽ",
+    "sectionDescription": "PicetaAI kết hợp AI tiên tiến với thiết kế trực quan để thay đổi cách bạn quản lý hình ảnh.",
+    "features": [
+      {
+        "title": "Tìm kiếm hình ảnh thông minh",
+        "description": "Tìm bất kỳ hình ảnh nào ngay lập tức bằng tìm kiếm văn bản hoặc hình ảnh nhờ AI.",
+        "content": "Tìm kiếm bằng cách mô tả hoặc tải lên hình ảnh tương tự để tìm các ảnh phù hợp trong bộ sưu tập."
+      },
+      {
+        "title": "Tìm kiếm ngôn ngữ tự nhiên",
+        "description": "Tìm kiếm hình ảnh bằng ngôn ngữ hàng ngày và câu hỏi hội thoại.",
+        "content": "Hỏi 'Hiển thị ảnh biển mùa hè năm ngoái' hoặc 'Tìm ảnh có chó của tôi' và nhận kết quả ngay lập tức, chính xác."
+      },
+      {
+        "title": "Dọn dẹp trùng lặp",
+        "description": "Tự động phát hiện và loại bỏ hình ảnh trùng hoặc tương tự.",
+        "content": "Giải phóng dung lượng và giữ bộ sưu tập gọn gàng với phát hiện trùng lặp thông minh."
+      },
+      {
+        "title": "Trò chuyện AI thông minh",
+        "description": "Trò chuyện với AI để hiểu thêm về bộ sưu tập hình ảnh và cách tổ chức.",
+        "content": "Đặt câu hỏi về ảnh và nhận câu trả lời thông minh về nội dung, mẫu và cách tổ chức."
+      }
+    ]
+  },
+  "footer": {
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ",
+    "contact": "Liên hệ",
+    "copyright": "PicetaAI. Đã đăng ký bản quyền."
+  },
+  "howItWorks": {
+    "sectionTitle": "Cách hoạt động",
+    "sectionDescription": "Khám phá cách PicetaAI giúp bạn tìm và quản lý hình ảnh dễ dàng.",
+    "steps": [
+      {
+        "title": "Mô tả hoặc tải lên",
+        "description": "Dùng ngôn ngữ tự nhiên để mô tả hoặc tải lên hình ảnh tương tự."
+      },
+      {
+        "title": "Xử lý AI",
+        "description": "AI trên thiết bị xử lý yêu cầu và tìm kiếm trong bộ sưu tập hình ảnh."
+      },
+      {
+        "title": "Kết quả tức thì",
+        "description": "Nhận kết quả chính xác ngay lập tức, không có dữ liệu nào rời khỏi thiết bị."
+      }
+    ]
+  },
+  "qualityAssessment": {
+    "advancedFeature": "Tính năng nâng cao",
+    "sectionTitle": "Đánh giá chất lượng hình ảnh",
+    "sectionDescription": "AI hiện đại đánh giá hình ảnh của bạn dựa trên cả yếu tố thẩm mỹ và kỹ thuật, hoàn toàn trên thiết bị để bảo mật tối đa.",
+    "qualityFactors": [
+      {
+        "title": "Đánh giá thẩm mỹ",
+        "description": "Phân tích bố cục, hòa sắc màu và sức hút thị giác"
+      },
+      {
+        "title": "Phân tích kỹ thuật",
+        "description": "Đo độ nét, mức nhiễu và độ chính xác phơi sáng"
+      },
+      {
+        "title": "Chấm điểm so sánh",
+        "description": "Xếp hạng các ảnh tương tự để tìm ra bản chất lượng cao nhất"
+      },
+      {
+        "title": "Đề xuất thông minh",
+        "description": "Gợi ý giữ lại ảnh dựa trên điểm chất lượng"
+      }
+    ],
+    "steps": [
+      {
+        "title": "Kiểm tra chất lượng bằng AI",
+        "description": "Tự động đánh giá chất lượng, độ nét và bố cục hình ảnh."
+      },
+      {
+        "title": "Lọc nâng cao",
+        "description": "Lọc ảnh theo chất lượng, nội dung hoặc tiêu chí tuỳ chỉnh để chọn nhanh."
+      },
+      {
+        "title": "Đánh giá ưu tiên bảo mật",
+        "description": "Mọi phân tích đều thực hiện trên thiết bị để đảm bảo quyền riêng tư tuyệt đối."
+      }
+    ],
+    "bestQuality": "Chất lượng tốt nhất",
+    "goodQuality": "Chất lượng tốt",
+    "averageQuality": "Chất lượng trung bình",
+    "whyMattersTitle": "Tại sao đánh giá chất lượng quan trọng",
+    "whyMattersDesc": "Khi bạn chụp nhiều ảnh tương tự nhau, việc chọn ra ảnh nên giữ lại có thể rất khó khăn. Đánh giá chất lượng ảnh của PicetaAI giúp bạn loại bỏ sự phân vân bằng cách phân tích khách quan từng ảnh và cung cấp điểm số chất lượng. Nhờ đó, bạn chỉ giữ lại những ảnh tốt nhất, tiết kiệm dung lượng mà vẫn lưu giữ những kỷ niệm giá trị nhất."
+  },
+  "testimonials": {
+    "sectionTitle": "Người dùng nói gì",
+    "sectionDescription": "Lắng nghe phản hồi từ những người đã trải nghiệm PicetaAI.",
+    "alexJohnson": "Alex Johnson",
+    "photographer": "Nhiếp ảnh gia",
+    "alexJohnsonContent": "PicetaAI đã thay đổi hoàn toàn cách tôi tổ chức thư viện ảnh. Tìm kiếm bằng ngôn ngữ tự nhiên thật kỳ diệu - tôi có thể tìm bất kỳ ảnh nào chỉ bằng mô tả!",
+    "mariaNguyen": "Maria Nguyễn",
+    "aiResearcher": "Nhà nghiên cứu AI",
+    "mariaNguyenContent": "Tôi thích mọi xử lý hình ảnh đều diễn ra trên thiết bị. PicetaAI cho tôi công cụ mạnh mẽ mà vẫn bảo mật dữ liệu.",
+    "chrisLee": "Chris Lee",
+    "designer": "Nhà thiết kế",
+    "chrisLeeContent": "Tính năng dọn dẹp trùng lặp và đánh giá chất lượng thực sự thay đổi cuộc chơi. Quy trình của tôi nhanh hơn nhiều!",
+    "sarahChen": "Sarah Chen",
+    "digitalArtist": "Họa sĩ số",
+    "sarahChenContent": "Là người có hàng ngàn ảnh tham khảo, tính năng dọn dẹp trùng lặp giúp tôi tiết kiệm rất nhiều dung lượng. Ưu tiên bảo mật là điều tôi cần.",
+    "michaelRodriguez": "Michael Rodriguez",
+    "travelBlogger": "Blogger du lịch",
+    "michaelRodriguezContent": "Tính năng chat AI giúp tôi tự động phân loại và gắn thẻ ảnh du lịch. Như có trợ lý cá nhân hiểu bộ sưu tập ảnh của tôi vậy."
+  },
+  "privacy": {
+    "sectionTitle": "Ưu tiên bảo mật",
+    "sectionDescription": "Dữ liệu của bạn không bao giờ rời khỏi thiết bị. Mọi xử lý AI đều diễn ra cục bộ.",
+    "onDeviceTitle": "Xử lý trên thiết bị",
+    "onDeviceDesc": "Mọi thao tác AI đều chạy trực tiếp trên thiết bị của bạn, đảm bảo hình ảnh không bao giờ rời khỏi quyền kiểm soát của bạn.",
+    "noCloudTitle": "Không lưu trữ đám mây",
+    "noCloudDesc": "Không như các ứng dụng khác, chúng tôi không lưu trữ hình ảnh của bạn trên đám mây. Ảnh luôn nằm trên thiết bị của bạn.",
+    "offlineTitle": "Khả năng hoạt động ngoại tuyến",
+    "offlineDesc": "Sử dụng PicetaAI ngay cả khi không có kết nối internet. Quyền riêng tư của bạn luôn được đảm bảo."
+  },
+  "waitlist": {
+    "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "joinFailed": "Tham gia danh sách chờ không thành công.",
+    "joinSuccess": "Cảm ơn bạn đã tham gia danh sách chờ. Chúng tôi sẽ thông báo cho bạn khi PicetaAI ra mắt.",
+    "joinSuccessDesc": "Bạn đã có trong danh sách!",
+    "submitError": "Đã xảy ra lỗi. Vui lòng thử lại sau.",
+    "emailPlaceholder": "Nhập email của bạn",
+    "joining": "Đang tham gia...",
+    "joinWaitlist": "Tham gia danh sách chờ",
+    "waitlistDescription": "Tham gia danh sách chờ để được thông báo khi chúng tôi ra mắt. Chúng tôi tôn trọng quyền riêng tư của bạn và sẽ không bao giờ chia sẻ email của bạn."
+  }
+}

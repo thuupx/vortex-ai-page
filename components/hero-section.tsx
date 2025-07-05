@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { WaitlistForm } from "@/components/waitlist-form";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+
 
 export function HeroSection() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const bubbleCanvasRef = useRef<HTMLCanvasElement>(null);
+  const t = useTranslations('hero');
+
 
   // Bubble Animation Effect
   useEffect(() => {
@@ -153,14 +157,10 @@ export function HeroSection() {
           >
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Manage Your Images with{" "}
-                <span className="gradient-text font-extrabold">
-                  AI-Powered Intelligence
-                </span>
+                {t('title')}
               </h1>
               <p className="max-w-[600px] text-primary-400/80 md:text-xl">
-                Search, clean up, and gain insights from your image collection
-                with privacy-first, on-device AI technology.
+                {t('subtitle')}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 min-[400px]:flex-row">

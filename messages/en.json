@@ -1,0 +1,141 @@
+{
+  "navbar": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "testimonials": "Testimonials",
+    "waitlist": "Join Waitlist"
+  },
+  "hero": {
+    "title": "Welcome to Vortex AI Page",
+    "subtitle": "Harness AI to transform your workflow."
+  },
+  "features": {
+    "sectionTitle": "Powerful Features",
+    "sectionDescription": "PicetaAI combines cutting-edge AI with intuitive design to transform how you manage your images.",
+    "features": [
+      {
+        "title": "Smart Image Search",
+        "description": "Find any image instantly with text or image-based search powered by AI.",
+        "content": "Search by describing what you're looking for or upload a similar image to find matches in your collection."
+      },
+      {
+        "title": "Natural Language Search",
+        "description": "Search your images using everyday language and conversational queries.",
+        "content": "Ask 'Show me beach photos from last summer' or 'Find pictures with my dog' and get instant, accurate results."
+      },
+      {
+        "title": "Duplicate Cleanup",
+        "description": "Automatically identify and remove duplicate or similar images.",
+        "content": "Free up storage space and keep your collection organized with intelligent duplicate detection."
+      },
+      {
+        "title": "AI Chat Insights",
+        "description": "Chat with AI to gain insights about your image collection and organization.",
+        "content": "Ask questions about your photos and get intelligent answers about content, patterns, and organization."
+      }
+    ]
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "PicetaAI. All rights reserved."
+  },
+  "howItWorks": {
+    "sectionTitle": "How It Works",
+    "sectionDescription": "Discover how PicetaAI makes finding and managing your images effortless.",
+    "steps": [
+      {
+        "title": "Describe or Upload",
+        "description": "Use natural language to describe what you're looking for or upload a similar image."
+      },
+      {
+        "title": "AI Processing",
+        "description": "Our on-device AI analyzes your request and searches through your image collection."
+      },
+      {
+        "title": "Instant Results",
+        "description": "Get accurate results instantly, with no data ever leaving your device."
+      }
+    ]
+  },
+  "qualityAssessment": {
+    "advancedFeature": "Advanced Feature",
+    "sectionTitle": "Image Quality Assessment",
+    "sectionDescription": "Our state-of-the-art AI evaluates your images based on both aesthetic and technical factors, all while running completely on your device for maximum privacy.",
+    "qualityFactors": [
+      {
+        "title": "Aesthetic Evaluation",
+        "description": "Analyzes composition, color harmony, and visual appeal"
+      },
+      {
+        "title": "Technical Analysis",
+        "description": "Measures sharpness, noise levels, and exposure accuracy"
+      },
+      {
+        "title": "Comparative Scoring",
+        "description": "Ranks similar images to identify the highest quality version"
+      },
+      {
+        "title": "Smart Recommendations",
+        "description": "Suggests which images to keep based on quality scores"
+      }
+    ],
+    "steps": [
+      {
+        "title": "AI-Powered Quality Check",
+        "description": "Automatically assess image quality, sharpness, and composition."
+      },
+      {
+        "title": "Advanced Filtering",
+        "description": "Filter images by quality, content, or custom criteria for fast curation."
+      },
+      {
+        "title": "Privacy-First Assessment",
+        "description": "All analysis happens on-device for complete privacy and security."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionTitle": "What Our Users Say",
+    "sectionDescription": "Hear from our beta testers who've experienced the power of PicetaAI.",
+    "alexJohnson": "Alex Johnson",
+    "photographer": "Photographer",
+    "alexJohnsonContent": "PicetaAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
+    "mariaNguyen": "Maria Nguyen",
+    "aiResearcher": "AI Researcher",
+    "mariaNguyenContent": "I love that all the image processing happens on my device. PicetaAI gives me powerful tools while keeping my data private.",
+    "chrisLee": "Chris Lee",
+    "designer": "Designer",
+    "chrisLeeContent": "The duplicate cleanup and quality assessment features are a game changer. My workflow is so much faster now!",
+    "sarahChen": "Sarah Chen",
+    "digitalArtist": "Digital Artist",
+    "sarahChenContent": "As someone with thousands of reference images, the duplicate cleanup feature has saved me so much storage space. The privacy-first approach is exactly what I needed.",
+    "michaelRodriguez": "Michael Rodriguez",
+    "travelBlogger": "Travel Blogger",
+    "michaelRodriguezContent": "The AI chat feature helps me categorize and tag my travel photos automatically. It's like having a personal assistant that understands my photo collection."
+  },
+  "privacy": {
+    "sectionTitle": "Privacy First",
+    "sectionDescription": "Your data never leaves your device. All AI processing happens locally.",
+    "onDeviceTitle": "On-Device Processing",
+    "onDeviceDesc": "All AI operations run directly on your device, ensuring your images never leave your control.",
+    "noCloudTitle": "No Cloud Storage",
+    "noCloudDesc": "Unlike other apps, we don't store your images in the cloud. Your photos stay on your device.",
+    "offlineTitle": "Offline Capability",
+    "offlineDesc": "Use PicetaAI even without an internet connection. Your privacy is never compromised."
+  },
+  "waitlist": {
+    "invalidEmail": "Please enter a valid email address.",
+    "joinFailed": "Failed to join waitlist.",
+    "joinSuccess": "Thanks for joining our waitlist. We'll notify you when PicetaAI launches.",
+    "joinSuccessDesc": "You're on the list!",
+    "submitError": "Something went wrong. Please try again later.",
+    "emailPlaceholder": "Enter your email",
+    "joining": "Joining...",
+    "joinWaitlist": "Join Waitlist",
+    "waitlistDescription": "Join our waitlist to be notified when we launch. We respect your privacy and will never share your email."
+  }
+}

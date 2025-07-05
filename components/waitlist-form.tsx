@@ -2,12 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTranslations } from "next-intl";
 import type React from "react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 
 export function WaitlistForm() {
+  const t = useTranslations("waitlist");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -17,7 +19,7 @@ export function WaitlistForm() {
     const emailSchema = z.string().email();
     const result = emailSchema.safeParse(email);
     if (!result.success) {
-      toast.error("Please enter a valid email address.");
+      toast.error(t("invalidEmail"));
       return;
     }
 
@@ -38,20 +40,17 @@ export function WaitlistForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Failed to join waitlist");
+        throw new Error(data.error || t("joinFailed"));
       }
 
-      toast.success(
-        "Thanks for joining our waitlist. We'll notify you when PicetaAI launches.",
-        {
-          description: "You're on the list!",
-        },
-      );
+      toast.success(t("joinSuccess"), {
+        description: t("joinSuccessDesc"),
+      });
 
       setEmail("");
     } catch (error) {
       console.error("Waitlist submission error:", error);
-      toast.error("Something went wrong. Please try again later.");
+      toast.error(t("submitError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +64,7 @@ export function WaitlistForm() {
       >
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder={t("emailPlaceholder")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="flex-1 bg-white/80 border-primary-100"
@@ -76,12 +75,11 @@ export function WaitlistForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto bg-primary-400 hover:bg-primary-400/90 text-white"
         >
-          {isSubmitting ? "Joining..." : "Join Waitlist"}
+          {isSubmitting ? t("joining") : t("joinWaitlist")}
         </Button>
       </form>
       <p className="text-xs text-center text-primary-400/70">
-        Join our waitlist to be notified when we launch. We respect your privacy
-        and will never share your email.
+        {t("waitlistDescription")}
       </p>
     </div>
   );

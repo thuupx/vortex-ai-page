@@ -9,28 +9,39 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
 
 export function TestimonialsSection() {
+  const t = useTranslations("testimonials");
   const testimonials = [
     {
-      name: "Alex Johnson",
-      role: "Photographer",
-      content:
-        "PicetaAI has completely transformed how I organize my photo library. The natural language search is like magic - I can find any photo just by describing it!",
+      name: t("alexJohnson"),
+      role: t("photographer"),
+      content: t("alexJohnsonContent"),
       avatar: "AJ",
     },
     {
-      name: "Sarah Chen",
-      role: "Digital Artist",
-      content:
-        "As someone with thousands of reference images, the duplicate cleanup feature has saved me so much storage space. The privacy-first approach is exactly what I needed.",
+      name: t("mariaNguyen"),
+      role: t("aiResearcher"),
+      content: t("mariaNguyenContent"),
+      avatar: "MN",
+    },
+    {
+      name: t("chrisLee"),
+      role: t("designer"),
+      content: t("chrisLeeContent"),
+      avatar: "CL",
+    },
+    {
+      name: t("sarahChen"),
+      role: t("digitalArtist"),
+      content: t("sarahChenContent"),
       avatar: "SC",
     },
     {
-      name: "Michael Rodriguez",
-      role: "Travel Blogger",
-      content:
-        "The AI chat feature helps me categorize and tag my travel photos automatically. It's like having a personal assistant that understands my photo collection.",
+      name: t("michaelRodriguez"),
+      role: t("travelBlogger"),
+      content: t("michaelRodriguezContent"),
       avatar: "MR",
     },
   ];
@@ -46,12 +57,11 @@ export function TestimonialsSection() {
           transition={{ duration: 0.5 }}
         >
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-              What Our Users Say
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400 mb-6">
+              {t('sectionTitle')}
             </h2>
             <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Hear from our beta testers who&apos;ve experienced the power of
-              PicetaAI.
+              {t('sectionDescription')}
             </p>
           </div>
         </motion.div>
