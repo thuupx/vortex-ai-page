@@ -1,9 +1,8 @@
 "use client";
 
-import { WaitlistForm } from "@/components/waitlist-form";
+import { TestFlightQR } from "@/components/testflight-qr";
 import * as motion from "motion/react-client";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export function HeroSection() {
@@ -154,15 +153,12 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="space-y-2">
-              <h1 className="gradient-text font-extrabold text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              <h1 className="py-2 gradient-text font-extrabold text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none">
                 {t("title")}
               </h1>
               <p className="max-w-[600px] text-primary-400/80 md:text-xl">
                 {t("subtitle")}
               </p>
-            </div>
-            <div className="flex flex-col items-center gap-2 min-[400px]:flex-row">
-              <WaitlistForm />
             </div>
           </motion.div>
           <motion.div
@@ -171,16 +167,7 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative aspect-square w-full max-w-[400px] overflow-hidden rounded-xl border bg-white/50 backdrop-blur-sm md:rounded-2xl lg:max-w-none floating">
-              <Image
-                src="/placeholder.svg"
-                alt="PicetaAI App Screenshot"
-                width={400}
-                height={600}
-                className="object-cover w-auto h-auto"
-                priority
-              />
-            </div>
+            <TestFlightQR testflightUrl="https://testflight.apple.com/join/9es5JZbD" />
           </motion.div>
         </div>
       </div>

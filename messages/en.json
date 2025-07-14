@@ -142,5 +142,11 @@
     "joining": "Joining...",
     "joinWaitlist": "Join Waitlist",
     "waitlistDescription": "Join our waitlist to be notified when we launch. We respect your privacy and will never share your email."
+  },
+  "testflight": {
+    "title": "Try the Beta",
+    "subtitle": "Scan the QR code to download our app on TestFlight",
+    "openTestflight": "Open in TestFlight",
+    "instructions": "TestFlight app required. Available only on iOS devices."
   }
 }

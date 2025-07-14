@@ -142,5 +142,11 @@
     "joining": "Đang xử lý...",
     "joinWaitlist": "Đăng ký nhận thông báo",
     "waitlistDescription": "Đăng ký để là người đầu tiên biết khi chúng tôi ra mắt. Email của bạn luôn được bảo mật tuyệt đối."
+  },
+  "testflight": {
+    "title": "Dùng thử phiên bản Beta",
+    "subtitle": "Quét mã QR để tải ứng dụng qua TestFlight",
+    "openTestflight": "Mở trong TestFlight",
+    "instructions": "Yêu cầu cài đặt ứng dụng TestFlight. Chỉ khả dụng trên thiết bị iOS."
   }
 }
