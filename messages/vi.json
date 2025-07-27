@@ -130,7 +130,7 @@
     "noCloudTitle": "Không lưu trữ đám mây",
     "noCloudDesc": "Khác với nhiều ứng dụng khác, chúng tôi không lưu ảnh của bạn lên đám mây. Ảnh luôn thuộc về bạn.",
     "offlineTitle": "Hoạt động ngoại tuyến",
-    "offlineDesc": "Bạn có thể dùng PicetaAI ngay cả khi không có internet. Quyền riêng tư luôn được bảo đảm."
+    "offlineDesc": "PicetaAI xử lý dữ liệu ngay cả khi không có internet. Quyền riêng tư của bạn luôn được bảo đảm."
   },
   "waitlist": {
     "invalidEmail": "Vui lòng nhập đúng địa chỉ email.",

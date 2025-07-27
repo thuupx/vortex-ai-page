@@ -130,7 +130,7 @@
     "noCloudTitle": "No Cloud Storage",
     "noCloudDesc": "Unlike other apps, we don't store your images in the cloud. Your photos stay on your device.",
     "offlineTitle": "Offline Capability",
-    "offlineDesc": "Use PicetaAI even without an internet connection. Your privacy is never compromised."
+    "offlineDesc": "PicetaAI processes your data locally even without an internet connection. Your privacy is never compromised."
   },
   "waitlist": {
     "invalidEmail": "Please enter a valid email address.",
