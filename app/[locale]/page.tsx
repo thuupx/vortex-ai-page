@@ -5,6 +5,7 @@ import { QualityAssessmentSection } from "@/components/quality-assessment-sectio
 import { HowItWorks } from "@/components/how-it-works";
 import { PrivacySection } from "@/components/privacy-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
+import { PricingSection } from "@/components/pricing-section";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <QualityAssessmentSection />
       <HowItWorks />
       <TestimonialsSection />
+      <PricingSection />
       <PrivacySection />
       <Footer />
     </main>

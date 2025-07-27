@@ -76,3 +76,24 @@
 .perspective-1000 {
   perspective: 1000px;
 }
+
+/* Custom scrollbar for pricing-section horizontal scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #b6bac8;
+  border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #b6bac8 #f3f4f6;
+}

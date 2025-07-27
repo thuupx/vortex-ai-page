@@ -5,7 +5,7 @@
     "howItWorks": "How It Works",
     "privacy": "Privacy",
     "testimonials": "Testimonials",
-    "waitlist": "Join Waitlist"
+    "join_beta": "Join Beta"
   },
   "hero": {
     "title": "Meet PicetaAI - AI for Photo Management",
@@ -148,5 +148,41 @@
     "subtitle": "Scan the QR code to download our app on TestFlight",
     "openTestflight": "Open in TestFlight",
     "instructions": "TestFlight app required. Available only on iOS devices."
+  },
+  "pricing": {
+    "sectionTitle": "Pricing Plans",
+    "sectionDescription": "Choose the plan that fits your needs and unlock the full power of AI.",
+    "Free": {
+      "title": "Free",
+      "description": "For getting started and trying out our core AI features."
+    },
+    "Pro": {
+      "title": "Pro",
+      "description": "For power users who want more AI and productivity."
+    },
+    "Premium": {
+      "title": "Premium",
+      "description": "Unlimited access for individuals who want the best AI experience."
+    },
+    "feature": {
+      "VisualSearch": "Visual Search",
+      "DuplicateMerge": "Duplicate Merge",
+      "AIImageSearch": "AI Image Search",
+      "AIChat": "AI Chat",
+      "AICaption": "AI Caption"
+    },
+    "unlimited": "Unlimited",
+    "limitText": "{monthly}/mo, {daily}/day",
+    "freeNote": "Your first 2,500 AI credits are free—discover what PicetaAI can do for you.",
+    "choose": "Choose",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "proPrice": "$2.99",
+    "proPriceYear": "$29.99",
+    "premiumPrice": "$6.99",
+    "premiumPriceYear": "$69.99",
+    "bestValue": "Best Value"
   }
 }

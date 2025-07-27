@@ -32,18 +32,18 @@ export function TestimonialsSection() {
       content: t("chrisLeeContent"),
       avatar: "CL",
     },
-    {
-      name: t("sarahChen"),
-      role: t("digitalArtist"),
-      content: t("sarahChenContent"),
-      avatar: "SC",
-    },
-    {
-      name: t("michaelRodriguez"),
-      role: t("travelBlogger"),
-      content: t("michaelRodriguezContent"),
-      avatar: "MR",
-    },
+    // {
+    //   name: t("sarahChen"),
+    //   role: t("digitalArtist"),
+    //   content: t("sarahChenContent"),
+    //   avatar: "SC",
+    // },
+    // {
+    //   name: t("michaelRodriguez"),
+    //   role: t("travelBlogger"),
+    //   content: t("michaelRodriguezContent"),
+    //   avatar: "MR",
+    // },
   ];
 
   return (

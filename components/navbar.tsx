@@ -1,10 +1,9 @@
 "use client";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function Navbar() {
-  const t = useTranslations('navbar');
+  const t = useTranslations("navbar");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -21,27 +20,21 @@ export function Navbar() {
             href="#features"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            {t('features')}
+            {t("features")}
           </Link>
           <Link
             href="#privacy"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            {t('privacy')}
+            {t("privacy")}
           </Link>
           <Link
-            href="#waitlist"
+            href="#join-beta"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
-            {t('waitlist')}
+            {t("join_beta")}
           </Link>
         </nav>
-        <div className="flex items-center gap-2">
-          {/* Language switcher placeholder */}
-          <Button asChild className="hidden md:flex">
-            <Link href="#waitlist">{t('waitlist')}</Link>
-          </Button>
-        </div>
       </div>
     </header>
   );

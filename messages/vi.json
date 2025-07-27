@@ -5,7 +5,7 @@
     "howItWorks": "Cách hoạt động",
     "privacy": "Bảo mật",
     "testimonials": "Cảm nhận",
-    "waitlist": "Tham gia"
+    "join_beta": "Trải nghiệm beta"
   },
   "hero": {
     "title": "Khám phá PicetaAI – trợ lý thông minh cho bộ ảnh của bạn",
@@ -148,5 +148,41 @@
     "subtitle": "Quét mã QR để tải ứng dụng qua TestFlight",
     "openTestflight": "Mở trong TestFlight",
     "instructions": "Yêu cầu cài đặt ứng dụng TestFlight. Chỉ khả dụng trên thiết bị iOS."
+  },
+  "pricing": {
+    "sectionTitle": "Gói giá linh hoạt",
+    "sectionDescription": "Chọn gói phù hợp để tận dụng tối đa sức mạnh AI.",
+    "Free": {
+      "title": "Free",
+      "description": "Khám phá và trải nghiệm các tính năng AI cơ bản."
+    },
+    "Pro": {
+      "title": "Pro",
+      "description": "Dành cho người dùng chuyên nghiệp, sử dụng AI nhiều hơn."
+    },
+    "Premium": {
+      "title": "Premium",
+      "description": "Không giới hạn cho cá nhân muốn trải nghiệm AI tốt nhất."
+    },
+    "feature": {
+      "VisualSearch": "Tìm kiếm hình ảnh",
+      "DuplicateMerge": "Gộp ảnh trùng",
+      "AIImageSearch": "Tìm kiếm ảnh AI",
+      "AIChat": "AI Chat",
+      "AICaption": "AI Caption"
+    },
+    "unlimited": "Không giới hạn",
+    "limitText": "{monthly}/tháng, {daily}/ngày",
+    "freeNote": "Tặng 2,500 AI credits khi cài ứng dụng để trải nghiệm với tất cả tính năng.",
+    "choose": "Chọn",
+    "monthly": "Theo tháng",
+    "yearly": "Theo năm",
+    "perMonth": "/tháng",
+    "perYear": "/năm",
+    "proPrice": "$2.99",
+    "proPriceYear": "$29.99",
+    "premiumPrice": "$6.99",
+    "premiumPriceYear": "$69.99",
+    "bestValue": "Tiết kiệm nhất"
   }
 }
