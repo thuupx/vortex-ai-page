@@ -1,5 +1,3 @@
-"use client";
-
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Card,
@@ -9,10 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import * as motion from "motion/react-client";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export function TestimonialsSection() {
-  const t = useTranslations("testimonials");
+export async function TestimonialsSection() {
+  const t = await getTranslations("testimonials");
   const testimonials = [
     {
       name: t("alexJohnson"),
@@ -58,10 +56,10 @@ export function TestimonialsSection() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400 mb-6">
-              {t('sectionTitle')}
+              {t("sectionTitle")}
             </h2>
             <p className="max-w-[900px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {t('sectionDescription')}
+              {t("sectionDescription")}
             </p>
           </div>
         </motion.div>

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export function Footer() {
-  const t = useTranslations('footer');
+export async function Footer() {
+  const t = await getTranslations('footer');
   return (
     <footer className="w-full border-t border-primary-100 bg-white py-6 md:py-12">
       <div className="container px-4 md:px-6">

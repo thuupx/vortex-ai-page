@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Card,
   CardContent,
@@ -10,10 +8,10 @@ import {
 import { Search, Trash2, MessageSquare, FileText } from "lucide-react";
 import * as motion from "motion/react-client";
 import { TiltCard } from "@/components/tilt-card";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export function FeaturesSection() {
-  const t = useTranslations('features');
+export async function FeaturesSection() {
+  const t = await getTranslations("features");
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -32,27 +30,27 @@ export function FeaturesSection() {
   const features = [
     {
       icon: <Search className="h-12 w-12 text-primary-300 mb-2" />,
-      title: t('features.0.title'),
-      description: t('features.0.description'),
-      content: t('features.0.content'),
+      title: t("features.0.title"),
+      description: t("features.0.description"),
+      content: t("features.0.content"),
     },
     {
       icon: <FileText className="h-12 w-12 text-primary-300 mb-2" />,
-      title: t('features.1.title'),
-      description: t('features.1.description'),
-      content: t('features.1.content'),
+      title: t("features.1.title"),
+      description: t("features.1.description"),
+      content: t("features.1.content"),
     },
     {
       icon: <Trash2 className="h-12 w-12 text-primary-300 mb-2" />,
-      title: t('features.2.title'),
-      description: t('features.2.description'),
-      content: t('features.2.content'),
+      title: t("features.2.title"),
+      description: t("features.2.description"),
+      content: t("features.2.content"),
     },
     {
       icon: <MessageSquare className="h-12 w-12 text-primary-300 mb-2" />,
-      title: t('features.3.title'),
-      description: t('features.3.description'),
-      content: t('features.3.content'),
+      title: t("features.3.title"),
+      description: t("features.3.description"),
+      content: t("features.3.content"),
     },
   ];
 
@@ -72,10 +70,10 @@ export function FeaturesSection() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary-400">
-              {t('sectionTitle')}
+              {t("sectionTitle")}
             </h2>
             <p className="max-w-[900px] text-primary-300/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {t('sectionDescription')}
+              {t("sectionDescription")}
             </p>
           </div>
         </motion.div>
