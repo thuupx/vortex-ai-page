@@ -1,158 +1,17 @@
-"use client";
-
 import { TestFlightQR } from "@/components/testflight-qr";
 import * as motion from "motion/react-client";
-import { useTranslations } from "next-intl";
-import { useEffect, useRef } from "react";
+import { getTranslations } from "next-intl/server";
 
-export function HeroSection() {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-  const bubbleCanvasRef = useRef<HTMLCanvasElement>(null);
-  const t = useTranslations("hero");
+import { BubbleCanvas } from "./bubble-canvas";
 
-  // Bubble Animation Effect
-  // TODO: In your _document.tsx or <Head> of the main page, add:
-  // <link rel="preload" as="image" href="/testflight-qr.png" />
-
-  useEffect(() => {
-    const startBubbles = () => {
-      const canvas = bubbleCanvasRef.current;
-      const ctx = canvas?.getContext("2d");
-      if (!canvas || !ctx) return;
-
-      let animationFrameId: number;
-      let width = 0;
-      let height = 0;
-      const bubbles: Array<{
-        x: number;
-        y: number;
-        r: number;
-        speed: number;
-        dx: number;
-        opacity: number;
-        color: string;
-      }> = [];
-      const colors = [
-        "#60a5fa33", // blue-400/20
-        "#818cf833", // indigo-400/20
-        "#f472b633", // pink-400/20
-        "#fbbf2433", // yellow-400/20
-        "#34d39933", // green-400/20
-      ];
-      const BUBBLE_COUNT = 32;
-
-      function resizeCanvas() {
-        if (!canvas || !ctx) return;
-        width = canvas.offsetWidth;
-        height = canvas.offsetHeight;
-        canvas.width = width * window.devicePixelRatio;
-        canvas.height = height * window.devicePixelRatio;
-        ctx.setTransform(
-          window.devicePixelRatio,
-          0,
-          0,
-          window.devicePixelRatio,
-          0,
-          0
-        );
-      }
-
-      function randomBubble() {
-        const r = Math.random() * 32 + 16;
-        return {
-          x: Math.random() * width,
-          y: Math.random() * height,
-          r,
-          speed: Math.random() * 0.5 + 0.2,
-          dx: (Math.random() - 0.5) * 0.3,
-          opacity: Math.random() * 0.4 + 0.2,
-          color: colors[Math.floor(Math.random() * colors.length)],
-        };
-      }
-
-      function initBubbles() {
-        bubbles.length = 0;
-        for (let i = 0; i < BUBBLE_COUNT; i++) {
-          bubbles.push(randomBubble());
-        }
-      }
-
-      function animate() {
-        if (!canvas || !ctx) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (const bubble of bubbles) {
-          ctx.globalAlpha = bubble.opacity;
-          ctx.beginPath();
-          ctx.arc(bubble.x, bubble.y, bubble.r, 0, 2 * Math.PI);
-          ctx.fillStyle = bubble.color;
-          ctx.shadowColor = bubble.color;
-          ctx.shadowBlur = 16;
-          ctx.fill();
-          ctx.shadowBlur = 0;
-          // Move bubble
-          bubble.y -= bubble.speed;
-          bubble.x += bubble.dx;
-          // Respawn if out of bounds
-          if (
-            bubble.y + bubble.r < 0 ||
-            bubble.x + bubble.r < 0 ||
-            bubble.x - bubble.r > width
-          ) {
-            Object.assign(bubble, randomBubble(), { y: height + bubble.r });
-          }
-        }
-        ctx.globalAlpha = 1;
-        animationFrameId = requestAnimationFrame(animate);
-      }
-
-      function handleResize() {
-        resizeCanvas();
-        initBubbles();
-      }
-
-      resizeCanvas();
-      initBubbles();
-      animate();
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        cancelAnimationFrame(animationFrameId);
-      };
-    };
-
-    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-      (window as Window & { requestIdleCallback?: (cb: () => void) => void })
-        .requestIdleCallback!(startBubbles);
-    } else {
-      setTimeout(startBubbles, 500);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrollY = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+export async function HeroSection() {
+  const t = await getTranslations("hero");
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden relative">
       <div className="absolute inset-0 bg-blue-gradient opacity-10 z-0"></div>
-      {/* Bubble Animation Canvas */}
-      <canvas
-        ref={bubbleCanvasRef}
-        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-        style={{ display: "block" }}
-        width={1920}
-        height={1080}
-      />
-      <div ref={parallaxRef} className="absolute inset-0 z-0">
+      <BubbleCanvas />
+      <div className="absolute inset-0 z-0">
         <div className="absolute top-20 left-20 w-64 h-64 bg-primary-50 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
         <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
@@ -160,7 +19,12 @@ export function HeroSection() {
 
       <div className="container px-4 md:px-6 relative z-10" id="waitlist">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
+          <motion.div
+            className="flex flex-col justify-center space-y-4"
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="space-y-2">
               <h1 className="py-2 gradient-text font-extrabold text-3xl tracking-tighter sm:text-5xl xl:text-6xl/none">
                 {t("title")}
@@ -169,7 +33,7 @@ export function HeroSection() {
                 {t("subtitle")}
               </p>
             </div>
-          </div>
+          </motion.div>
           <motion.div
             className="flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
