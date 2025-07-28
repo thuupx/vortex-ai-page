@@ -43,6 +43,8 @@ export const metadata: Metadata = {
       "Manage your images with AI-powered search, cleanup, and insights - all while keeping your data private with on-device processing.",
     images: ["/og-image.png"],
   },
+  applicationName: "PicetaAI",
+  metadataBase: new URL("https://www.thepiceta.com"),
 };
 
 
@@ -63,6 +65,7 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale}>
+      <head />
       <body className={openSans.className}>
         <Providers locale={locale} messages={messages}>
           {children}

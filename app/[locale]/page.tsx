@@ -19,7 +19,6 @@ const PrivacySection = dynamic(() =>
   import("@/components/privacy-section").then((mod) => mod.PrivacySection)
 );
 
-
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">

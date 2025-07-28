@@ -1,15 +1,12 @@
-// All user-facing strings are internationalized using next-intl. See messages/en.json and messages/vi.json for translation keys.
 "use client";
 
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Star, ImagePlus, Gauge, Award } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { Card } from "@/components/ui/card";
 import { TiltCard } from "@/components/tilt-card";
+import { Card } from "@/components/ui/card";
+import { Award, Gauge, ImagePlus, Star } from "lucide-react";
+import * as motion from "motion/react-client";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
-
-import "@splidejs/splide/css";
 
 export function QualityAssessmentSection() {
   const t = useTranslations("qualityAssessment");
@@ -40,6 +37,10 @@ export function QualityAssessmentSection() {
 
   useEffect(() => {
     const loadSplide = async () => {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      await import("@splidejs/splide/css");
+
       if (splideRef.current) {
         const { Splide } = await import("@splidejs/splide");
 
