@@ -5,22 +5,22 @@ import { Search, Zap, Sparkles, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function HowItWorks() {
-  const t = useTranslations('howItWorks');
+  const t = useTranslations("howItWorks");
   const steps = [
     {
       icon: <Search className="h-8 w-8 text-primary-50" />,
-      title: t('steps.0.title'),
-      description: t('steps.0.description'),
+      title: t("steps.0.title"),
+      description: t("steps.0.description"),
     },
     {
       icon: <Zap className="h-8 w-8 text-primary-50" />,
-      title: t('steps.1.title'),
-      description: t('steps.1.description'),
+      title: t("steps.1.title"),
+      description: t("steps.1.description"),
     },
     {
       icon: <Sparkles className="h-8 w-8 text-primary-50" />,
-      title: t('steps.2.title'),
-      description: t('steps.2.description'),
+      title: t("steps.2.title"),
+      description: t("steps.2.description"),
     },
   ];
 
@@ -36,10 +36,10 @@ export function HowItWorks() {
         >
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              {t('sectionTitle')}
+              {t("sectionTitle")}
             </h2>
             <p className="max-w-[900px] text-primary-50/90 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              {t('sectionDescription')}
+              {t("sectionDescription")}
             </p>
           </div>
         </motion.div>
