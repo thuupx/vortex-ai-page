@@ -24,7 +24,7 @@ export function PrivacyPolicy() {
               Privacy Policy
             </h1>
             <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Last Updated: February 8, 2025
+              Last Updated: November 14, 2025
             </p>
           </div>
 
@@ -114,10 +114,10 @@ export function PrivacyPolicy() {
                 If you have questions about this Privacy Policy, please contact
                 us at:
                 <a
-                  href="mailto:support@thepiceta.com"
+                  href="mailto:thepiceta.ai@gmail.com"
                   className="text-primary-600 hover:underline ml-1"
                 >
-                  support@thepiceta.com
+                  thepiceta.ai@gmail.com
                 </a>
               </p>
             </Section>

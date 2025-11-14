@@ -21,10 +21,10 @@ export function TermsOfService() {
         <div className="mx-auto max-w-3xl space-y-8">
           <div className="space-y-4 text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-              Terms of Service
+              Terms of Use & End User License Agreement (EULA)
             </h1>
             <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Last Updated: February 8, 2025
+              Last Updated: November 14, 2025
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export function TermsOfService() {
                   device
                 </li>
                 <li>Use the App for personal, non-commercial purposes</li>
-                <li>Access and use the App&apos;s features as intended</li>
+                <li>Access and use the App&apos;s features</li>
               </ul>
             </Section>
 
@@ -75,7 +75,40 @@ export function TermsOfService() {
               </ul>
             </Section>
 
-            <Section title="5. App Updates and Changes">
+            <Section title="5. Subscriptions and Payments">
+              <p className="mb-4 text-gray-500 dark:text-gray-400">
+                Piceta may offer auto-renewable subscription options (for
+                example, a premium plan with additional features). The
+                subscription title, length (such as monthly or yearly), and
+                price are clearly displayed in the app at the time of purchase.
+              </p>
+              <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-500 dark:text-gray-400">
+                <li>
+                  Payment will be charged to your Apple ID account at
+                  confirmation of purchase.
+                </li>
+                <li>
+                  The subscription automatically renews for the same price and
+                  duration unless auto-renew is turned off at least 24 hours
+                  before the end of the current period.
+                </li>
+                <li>
+                  Your account will be charged for renewal within 24 hours prior
+                  to the end of the current period.
+                </li>
+                <li>
+                  You can manage or cancel your subscription and turn off
+                  auto-renewal at any time after purchase by going to your
+                  account settings in the App Store.
+                </li>
+                <li>
+                  Any unused portion of a free trial period, if offered, will be
+                  forfeited when you purchase a subscription.
+                </li>
+              </ul>
+            </Section>
+
+            <Section title="6. App Updates and Changes">
               <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-500 dark:text-gray-400">
                 <li>We may update the App periodically</li>
                 <li>Updates may add, modify, or remove features</li>
@@ -84,7 +117,7 @@ export function TermsOfService() {
               </ul>
             </Section>
 
-            <Section title="6. Disclaimers">
+            <Section title="7. Disclaimers">
               <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-500 dark:text-gray-400">
                 <li>
                   The App is provided &quot;as is&quot; without warranties
@@ -95,7 +128,7 @@ export function TermsOfService() {
               </ul>
             </Section>
 
-            <Section title="7. Limitation of Liability">
+            <Section title="8. Limitation of Liability">
               <p className="mb-4 text-gray-500 dark:text-gray-400">
                 We shall not be liable for:
               </p>
@@ -107,15 +140,19 @@ export function TermsOfService() {
               </ul>
             </Section>
 
-            <Section title="8. Termination">
+            <Section title="9. Termination">
               <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-500 dark:text-gray-400">
-                <li>We may terminate access for violations</li>
-                <li>You may stop using the App at any time</li>
-                <li>Terms survive termination where applicable</li>
+                <li>You may stop using the App and uninstall it at any time.</li>
+                <li>We may suspend or terminate your right to use the App if you
+                materially or repeatedly violate these Terms or if we discontinue
+                the App.</li>
+                <li>Sections that by their nature should survive termination (such
+                as intellectual property, disclaimers, and limitations of
+                liability) will continue to apply.</li>
               </ul>
             </Section>
 
-            <Section title="9. Governing Law">
+            <Section title="10. Governing Law">
               <p className="mb-4 text-gray-500 dark:text-gray-400">
                 These terms are governed by the laws of the jurisdiction in
                 which the App is operated, without regard to its conflict of law
@@ -123,14 +160,32 @@ export function TermsOfService() {
               </p>
             </Section>
 
-            <Section title="10. Contact Information">
+            <Section title="11. Apple App Store End User License Agreement (EULA)">
+              <p className="mb-4 text-gray-500 dark:text-gray-400">
+                If you download Piceta from the Apple App Store, your use of the
+                App is also governed by Apple&apos;s standard Licensed
+                Application End User License Agreement (EULA), which applies in
+                addition to and, where applicable, supersedes these Terms. You
+                can review Apple&apos;s EULA at:
+              </p>
+              <a
+                href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                className="text-primary-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+              </a>
+            </Section>
+
+            <Section title="12. Contact Information">
               <p className="mb-4 text-gray-500 dark:text-gray-400">
                 For questions about these Terms, please contact us at:
                 <a
-                  href="mailto:legal@thepiceta.com"
+                  href="mailto:thepiceta.ai@gmail.com"
                   className="text-primary-600 hover:underline ml-1"
                 >
-                  legal@thepiceta.com
+                  thepiceta.ai@gmail.com
                 </a>
               </p>
             </Section>
